@@ -125,6 +125,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            
         }
 
         private void AssignAnimationIDs()

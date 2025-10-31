@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1887691584032921360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676277782631109342}
+  - component: {fileID: 114726503649427024}
+  m_Layer: 0
+  m_Name: PageRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676277782631109342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887691584032921360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.937038, y: 2.5221734, z: -0.9125854}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114726503649427024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887691584032921360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78916119c39723a47905e896b1034f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRender: {fileID: 8400000, guid: e60554da5c9d2ae418b16459e1a3aac3, type: 2}
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  cases:
+  - name: 
+    texture: {fileID: 8400000, guid: 1f37814daf8f5e544930bc65f749959b, type: 2}
+    x: 0.049
+    y: 0.045
+    width: 0.6356
+    height: 0.294
+    alpha: 1
+  - name: 
+    texture: {fileID: 8400000, guid: 73ab7571e74c12a43988038304b7a24f, type: 2}
+    x: 0.049
+    y: 0.371
+    width: 0.371
+    height: 0.2408
+    alpha: 1
+  - name: 
+    texture: {fileID: 8400000, guid: f31df827a63687843baac7c5cc54af71, type: 2}
+    x: 0.458
+    y: 0.371
+    width: 0.224
+    height: 0.2408
+    alpha: 1
+  - name: 
+    texture: {fileID: 8400000, guid: 9ca49d238faab614d9f4aa1ff1d8fdb7, type: 2}
+    x: 0.049
+    y: 0.636
+    width: 0.6356
+    height: 0.336
+    alpha: 1
+  blitMaterial: {fileID: 0}
