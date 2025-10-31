@@ -45,7 +45,7 @@ Material:
     m_Colors:
     - _panel1: {r: -1.4, g: 0.09, b: 0, a: 0}
     - _panel1_tiling: {r: 5.19, g: 3.13, b: 0, a: 0}
-    - _panel2: {r: 0.83, g: 0.09, b: 0, a: 0}
+    - _panel2: {r: 0.04, g: 0.09, b: 0, a: 0}
     - _panel2_tiling: {r: 2.77, g: 2.33, b: 0, a: 0}
     - _panel3: {r: -0.06, g: 1.21, b: 0, a: 0}
     - _panel3_tiling: {r: 2.09, g: -1.35, b: 0, a: 0}

@@ -1324,7 +1324,7 @@
     "m_Title": "outline",
     "m_Position": {
         "x": -2761.0,
-        "y": 725.0
+        "y": 725.0000610351563
     }
 }
 
@@ -2273,7 +2273,7 @@
     "m_ObjectId": "3193f1e9e6f7425b9aaccb8100c539bd",
     "m_Title": "in_panel/mask",
     "m_Position": {
-        "x": -2732.0,
+        "x": -2731.999755859375,
         "y": -256.0
     }
 }
@@ -3608,8 +3608,8 @@
     "m_ObjectId": "6649e04afda6459782fc67a628ad7cbb",
     "m_Title": "outline additioned",
     "m_Position": {
-        "x": -1025.0,
-        "y": 863.0
+        "x": -1025.0001220703125,
+        "y": 863.0000610351563
     }
 }
 
@@ -4470,7 +4470,7 @@
     "m_ObjectId": "8b08d0b0b62c4bde8c48c1940043c8a6",
     "m_Title": "outside_panel/mask",
     "m_Position": {
-        "x": -2737.0,
+        "x": -2736.999755859375,
         "y": -1483.0
     }
 }
@@ -4526,7 +4526,7 @@
     "m_ObjectId": "9082b1858e1c4d90a1de6a0092c7503e",
     "m_Title": "mask_panel additioned",
     "m_Position": {
-        "x": 44.0,
+        "x": 44.0001220703125,
         "y": 859.0
     }
 }
@@ -4537,7 +4537,7 @@
     "m_ObjectId": "913bc2d48c164c3687820432a27f56b7",
     "m_Title": "outline",
     "m_Position": {
-        "x": -2727.0,
+        "x": -2726.999755859375,
         "y": -884.0
     }
 }
@@ -6619,7 +6619,7 @@
     "m_ObjectId": "ec8da1bc83cc4dc2913ce20b2c297e22",
     "m_Title": "outside_panel/mask",
     "m_Position": {
-        "x": -2763.0,
+        "x": -2762.999755859375,
         "y": 281.0
     }
 }
@@ -6953,8 +6953,8 @@
     "m_ObjectId": "ff80a991ef5a414894cb1477f643a9b0",
     "m_Title": "noise",
     "m_Position": {
-        "x": -6190.0,
-        "y": -1015.0
+        "x": -6190.00048828125,
+        "y": -1015.0001831054688
     }
 }
 
