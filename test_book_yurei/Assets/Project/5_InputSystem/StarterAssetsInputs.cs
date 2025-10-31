@@ -12,6 +12,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool lookBook;
+		public bool exitBook;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +45,16 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+		
+		public void OnLookBook(InputValue value)
+		{
+			LookBookInput(value.isPressed);
+		}
+		
+		public void OnExitBook(InputValue value)
+		{
+			ExitBookInput(value.isPressed);
+		}
 #endif
 
 
@@ -64,6 +76,16 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+		
+		public void LookBookInput(bool newSprintState)
+		{
+			lookBook = newSprintState;
+		}
+		
+		public void ExitBookInput(bool newSprintState)
+		{
+			exitBook = newSprintState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
