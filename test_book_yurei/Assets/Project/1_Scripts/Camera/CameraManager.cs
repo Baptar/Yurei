@@ -35,16 +35,4 @@ public class CameraManager : MonoBehaviour
             mainCamera.transform.DOLocalMove(zonePosition, easeDuration).SetEase(easeFunction);            
         }
     }
-
-    [ContextMenu("modif scale dacal")]
-    public void modif_scale_dacale()
-    {
-        // Animation de la taille avec DOTween
-        DOTween.To(
-            () => projector.size,
-            x => projector.size = x,
-            new Vector3(projector.size.x / 2, projector.size.y / 2, projector.size.z),
-            1.5f
-        ).SetEase(Ease.OutBack);
-    }
 }
