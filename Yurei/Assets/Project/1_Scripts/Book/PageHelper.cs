@@ -27,6 +27,7 @@ public class PageHelper : MonoBehaviour
         Debug.Log("AfterANimationMoveToRight");
         BookManager.Instance.SetMaterialRightPage(GetMaterialLeftMovingPage());
         BookManager.Instance.numberTurningPageToRight--;
+        gameObject.SetActive(false);
         Destroy(gameObject, 0.5f);
     }
     
@@ -35,6 +36,7 @@ public class PageHelper : MonoBehaviour
         Debug.Log("AfterANimationMoveToLeft");
         BookManager.Instance.SetMaterialLeftPage(GetMaterialRightMovingPage());
         BookManager.Instance.numberTurningPageToLeft--;
+        gameObject.SetActive(false);
         Destroy(gameObject, 0.5f);
     }
 }
