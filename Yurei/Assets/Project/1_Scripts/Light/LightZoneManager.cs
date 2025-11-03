@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class LightZoneManager : MonoBehaviour
 {
-    public static LightZoneManager Instance;
+    /*public static LightZoneManager Instance;
     private CameraZone actualCameraZone;
     
     private void Awake()
@@ -28,5 +28,5 @@ public class LightZoneManager : MonoBehaviour
         actualCameraZone.ManagerObjectToActivate(false);
         actualCameraZone.ManageRenderTexturesLight(false);
         actualCameraZone = newZone;
-    }
+    }*/
 }

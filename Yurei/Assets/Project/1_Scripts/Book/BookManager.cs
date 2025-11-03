@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class BookManager : MonoBehaviour
@@ -36,6 +37,7 @@ public class BookManager : MonoBehaviour
     public int numberTurningPageToLeft;
     public int numberTurningPageToRight;
     public bool isLookingBook;
+    public bool isCameraMoving;
     
     
     private Vector3 lastCameraPosition;
@@ -59,8 +61,8 @@ public class BookManager : MonoBehaviour
     /// <summary>
     /// Conditions functions
     /// </summary>
-    private bool CanLookBook() => !isLookingBook;
-    private bool CanExitBook() => isLookingBook && numberTurningPageToLeft <= 0 && numberTurningPageToRight <= 0;
+    private bool CanLookBook() => !isLookingBook && !isCameraMoving;
+    private bool CanExitBook() => isLookingBook && numberTurningPageToLeft <= 0 && numberTurningPageToRight <= 0 && !isCameraMoving;
     private bool CanNextPage() => isLookingBook && numberTurningPageToLeft <= 0 && currentPageNumber < pageCount;
     private bool CanPreviousPage() => isLookingBook && numberTurningPageToRight <= 0 && currentPageNumber > 0;
 
@@ -90,16 +92,28 @@ public class BookManager : MonoBehaviour
     /// <summary>
     /// Logic functions
     /// </summary>
-    private void LookBook()
+    private void LookBook(Action onComplete = null)
     {
+        isCameraMoving = true;
+            
         lastCameraPosition = CameraManager.Instance.mainCamera.transform.position;
         lastCameraRotation = CameraManager.Instance.mainCamera.transform.rotation;
-        CameraManager.Instance.MoveCameraTo(lookBookTransform.position, lookBookTransform.rotation, Ease.InOutExpo, 0.5f, () => { isLookingBook = true; });
+        CameraManager.Instance.MoveCameraTo(lookBookTransform.position, lookBookTransform.rotation, Ease.InOutExpo, 0.5f,
+            () =>
+            {
+                isCameraMoving = false;
+                isLookingBook = true;
+            });
     }
     
-    private void ExitBook()
+    private void ExitBook(Action onComplete = null)
     {
-        CameraManager.Instance.MoveCameraTo(lastCameraPosition, lastCameraRotation, Ease.InOutExpo, 0.5f, () => { isLookingBook = false; });
+        isCameraMoving = true;
+        isLookingBook = false;
+        CameraManager.Instance.MoveCameraTo(lastCameraPosition, lastCameraRotation, Ease.InOutExpo, 0.5f, () =>
+        {
+            isCameraMoving = false;
+        });
     }
     
     /// <summary>
@@ -113,7 +127,7 @@ public class BookManager : MonoBehaviour
     ///     - change "right" on "left of moving page"
     ///     - remove moving page
     /// </summary>
-    private void NextPage()
+    private void NextPage(Action onComplete = null)
     {
         GameObject go = Instantiate(pagePrefab, pageSpawnPoint.position, pageSpawnPoint.rotation);
         if (go.TryGetComponent(out PageHelper page))
@@ -135,7 +149,7 @@ public class BookManager : MonoBehaviour
             // change " left of moving page" to the next right page
             page.SetMaterialLeftMovingPage(nextRightMaterial);
 
-            page.PlayPageAnimation(true);
+            page.PlayPageAnimation(true, onComplete);
         }
         
         else Destroy(go);
@@ -152,7 +166,7 @@ public class BookManager : MonoBehaviour
     ///     - change "left" on "right of moving page"
     ///     - remove moving page
     /// </summary>
-    private void PreviousPage()
+    private void PreviousPage(Action onComplete = null)
     {
         GameObject go = Instantiate(pagePrefab, pageSpawnPoint.position, pageSpawnPoint.rotation);
         if (go.TryGetComponent(out PageHelper page))
@@ -174,7 +188,7 @@ public class BookManager : MonoBehaviour
             // change " right of moving page" to the previous left page
             page.SetMaterialRightMovingPage(previousLeftMaterial);
 
-            page.PlayPageAnimation(false);
+            page.PlayPageAnimation(false, onComplete);
         }
         
         else Destroy(go);
@@ -217,5 +231,20 @@ public class BookManager : MonoBehaviour
     private Material GetNextLeftPageMaterial()
     {
         return currentPageNumber < (doublePageMaterialDatas.Length - 1) ? doublePageMaterialDatas[currentPageNumber + 1].leftPagesMaterial : emptyPageMaterial;
+    }
+    
+    public int GetCurrentPageNumber() => currentPageNumber;
+
+    /// <summary>
+    /// On Player finish page
+    /// </summary>
+    public void OnPlayerFinishedPage(bool isRightPage, Action onComplete = null)
+    {
+        LookBook(() =>
+        {
+            // after look book 
+            if (isRightPage) PreviousPage(onComplete);
+            else NextPage(onComplete);
+        });
     }
 }
