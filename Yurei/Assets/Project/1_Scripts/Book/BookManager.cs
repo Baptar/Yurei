@@ -103,6 +103,7 @@ public class BookManager : MonoBehaviour
             {
                 isCameraMoving = false;
                 isLookingBook = true;
+                onComplete?.Invoke();
             });
     }
     
@@ -243,6 +244,7 @@ public class BookManager : MonoBehaviour
         LookBook(() =>
         {
             // after look book 
+            isLookingBook = false;
             if (isRightPage) PreviousPage(onComplete);
             else NextPage(onComplete);
         });

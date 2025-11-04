@@ -52,7 +52,7 @@ public class CameraZone : MonoBehaviour
         // case new case in a different page
         if (pageNumberAssociated != BookManager.Instance.GetCurrentPageNumber())
         {
-            BookManager.Instance.OnPlayerFinishedPage(pageNumberAssociated > BookManager.Instance.GetCurrentPageNumber(),
+            BookManager.Instance.OnPlayerFinishedPage(pageNumberAssociated < BookManager.Instance.GetCurrentPageNumber(),
                 () =>
                 {
                     CameraManager.Instance.SwitchTo(zoneCamera, true, zonePosition, easeFunction, easeDuration);
