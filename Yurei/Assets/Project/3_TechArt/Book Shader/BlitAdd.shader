@@ -27,6 +27,7 @@ Shader "Hidden/BlitAdd"
             {
                 // Inversion horizontale
                 float2 uvFlipped = float2(1 - i.uv.x, i.uv.y);
+                
 
                 fixed4 c = tex2D(_MainTex, uvFlipped);
                 c.a *= _Alpha;

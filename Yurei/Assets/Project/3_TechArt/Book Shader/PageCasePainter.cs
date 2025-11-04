@@ -8,19 +8,23 @@ public class PageCasePainter : MonoBehaviour
     {
         public string name;
         public Texture texture;
-        public float x = 0f;       // left (0..1)
-        public float y = 0f;       // bottom (0..1)
-        public float width = 0.3f; // (0..1)
-        public float height = 0.3f;// (0..1)
+        public float x = 0f;       
+        public float y = 0f;       
+        public float width = 0.3f; 
+        public float height = 0.3f;
         public float alpha = 1f;
+        
+        [Header("Contour")]
+        public bool drawOutline = false;
+        [Range(0.5f, 50f)] public float outlineThickness = 2f;
+        public Color outlineColor = Color.white;
     }
 
     public RenderTexture targetRender;
-    public Color backgroundColor = Color.clear; // si transparent -> Color.clear
+    public Color backgroundColor = Color.clear; 
     public CaseData[] cases;
     public bool update = true;
-
-    // Material qui contient le shader Hidden/BlitAdd (ou tout shader unlit avec alpha)
+    
     [Tooltip("Material must use an alpha-blending shader (SrcAlpha OneMinusSrcAlpha).")]
     public Material blitMaterial;
 
@@ -47,21 +51,17 @@ public class PageCasePainter : MonoBehaviour
         int w = targetRender.width;
         int h = targetRender.height;
 
-        // Bind RT and clear (avec alpha)
         RenderTexture prev = RenderTexture.active;
         RenderTexture.active = targetRender;
         GL.PushMatrix();
-        GL.LoadPixelMatrix(0, w, 0, h); // espace pixel dans la RT
+        GL.LoadPixelMatrix(0, w, 0, h);
 
-        // Clear: utilise GL.Clear pour fixer le fond
         GL.Clear(true, true, backgroundColor);
 
-        // Draw chaque case avec DrawTexture (position en pixels)
         foreach (var c in cases)
         {
             if (c == null || c.texture == null) continue;
 
-            // Calcul de la rectangle en pixels (y zéro = bottom)
             float px = c.x * w;
             float py = c.y * h;
             float pw = Mathf.Max(1, c.width * w);
@@ -69,14 +69,74 @@ public class PageCasePainter : MonoBehaviour
 
             Rect dst = new Rect(px, py, pw, ph);
 
-            // Paramètre alpha si nécessaire (assure-toi que blitMaterial utilise _MainTex)
             blitMaterial.SetFloat("_Alpha", c.alpha);
 
-            // DrawTexture utilise le material si fourni - il doit sampler _MainTex
             Graphics.DrawTexture(dst, c.texture, blitMaterial);
+            
+            if (c.drawOutline && c.outlineThickness > 0f)
+                DrawRectOutline(dst, c.outlineColor, c.outlineThickness);
         }
 
         GL.PopMatrix();
         RenderTexture.active = prev;
+    }
+    
+    void DrawRectOutline(Rect rect, Color color, float thickness)
+    {
+        Material lineMat = GetLineMaterial();
+        lineMat.SetPass(0);
+        GL.Begin(GL.QUADS);
+        GL.Color(color);
+
+        float xMin = rect.xMin;
+        float xMax = rect.xMax;
+        float yMin = rect.yMin;
+        float yMax = rect.yMax;
+
+        float maxThick = Mathf.Min(thickness, Mathf.Min(rect.width, rect.height));
+
+        // Haut
+        GL.Vertex3(xMin - maxThick, yMax, 0);
+        GL.Vertex3(xMax + maxThick, yMax, 0);
+        GL.Vertex3(xMax + maxThick, yMax + maxThick, 0);
+        GL.Vertex3(xMin - maxThick, yMax + maxThick, 0);
+
+        // Bas
+        GL.Vertex3(xMin - maxThick, yMin - maxThick, 0);
+        GL.Vertex3(xMax + maxThick, yMin - maxThick, 0);
+        GL.Vertex3(xMax + maxThick, yMin, 0);
+        GL.Vertex3(xMin - maxThick, yMin, 0);
+
+        // Gauche
+        GL.Vertex3(xMin - maxThick, yMin, 0);
+        GL.Vertex3(xMin, yMin, 0);
+        GL.Vertex3(xMin, yMax, 0);
+        GL.Vertex3(xMin - maxThick, yMax, 0);
+
+        // Droite
+        GL.Vertex3(xMax, yMin, 0);
+        GL.Vertex3(xMax + maxThick, yMin, 0);
+        GL.Vertex3(xMax + maxThick, yMax, 0);
+        GL.Vertex3(xMax, yMax, 0);
+
+        GL.End();
+    }
+
+    static Material _lineMat;
+    Material GetLineMaterial()
+    {
+        if (_lineMat == null)
+        {
+            Shader shader = Shader.Find("Hidden/Internal-Colored");
+            _lineMat = new Material(shader)
+            {
+                hideFlags = HideFlags.HideAndDontSave
+            };
+            _lineMat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            _lineMat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            _lineMat.SetInt("_Cull", (int)UnityEngine.Rendering.CullMode.Off);
+            _lineMat.SetInt("_ZWrite", 0);
+        }
+        return _lineMat;
     }
 }
