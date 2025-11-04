@@ -3575,7 +3575,7 @@ MonoBehaviour:
   followPlayer: 1
   zonePosition: {x: 0.151, y: 0.478, z: 0.25}
   easeFunction: 6
-  easeDuration: 0.5
+  easeDuration: 1
 --- !u!114 &388825578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7004,7 +7004,7 @@ MonoBehaviour:
   followPlayer: 1
   zonePosition: {x: 0.151, y: 0.478, z: -0.29}
   easeFunction: 6
-  easeDuration: 0.5
+  easeDuration: 1
 --- !u!114 &831418708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7646,60 +7646,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4603155083716662, guid: 985369c38b6cde34c9edcb82fcb80fcd, type: 3}
   m_PrefabInstance: {fileID: 899590816}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &905031653
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 938180607}
-    m_Modifications:
-    - target: {fileID: 190274, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_Name
-      value: Debris01_6 (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_RootOrder
-      value: 59
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.010000932
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 33.38349
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.74243623
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000024191644
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.66991675
-      objectReference: {fileID: 0}
-    - target: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00000021828659
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8de24721e0816684687d5996f397a82d, type: 3}
---- !u!4 &905031654 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 480466, guid: 8de24721e0816684687d5996f397a82d, type: 3}
-  m_PrefabInstance: {fileID: 905031653}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &928439186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7822,7 +7768,6 @@ Transform:
   - {fileID: 730061958}
   - {fileID: 2037823639}
   - {fileID: 868993542}
-  - {fileID: 905031654}
   - {fileID: 136858602}
   - {fileID: 1066001079}
   - {fileID: 134488456}
@@ -9264,7 +9209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _input: {fileID: 1070666548}
-  moveSpeed: 1.8
+  moveSpeed: 1.6
   sprintSpeed: 5.335
   rotationSmoothTime: 0.219
   speedChangeRate: 10
@@ -10953,7 +10898,7 @@ MonoBehaviour:
   followPlayer: 1
   zonePosition: {x: 0, y: 0.84, z: -0.15}
   easeFunction: 6
-  easeDuration: 0.5
+  easeDuration: 1
 --- !u!114 &1295442430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11574,11 +11519,15 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: 33d43e9e172663640a541f13a6b57f5b, type: 2}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[0].x
-      value: 0.02
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
+      propertyPath: cases.Array.data[0].y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[1].x
@@ -11605,8 +11554,12 @@ PrefabInstance:
       value: 0.256
       objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
+      propertyPath: cases.Array.data[0].alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[0].width
-      value: 0.22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[1].width
@@ -11622,7 +11575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[0].height
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[1].height
@@ -11639,7 +11592,7 @@ PrefabInstance:
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[0].texture
       value: 
-      objectReference: {fileID: 8400000, guid: 73ab7571e74c12a43988038304b7a24f, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114726503649427024, guid: 051bf792ae02ee147bc2b7ab87ae24a7, type: 3}
       propertyPath: cases.Array.data[2].texture
       value: 
@@ -12858,7 +12811,7 @@ MonoBehaviour:
   followPlayer: 1
   zonePosition: {x: 0.29, y: 0.478, z: -0.02}
   easeFunction: 6
-  easeDuration: 0.5
+  easeDuration: 1
 --- !u!114 &1548885955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15758,7 +15711,7 @@ MonoBehaviour:
   followPlayer: 1
   zonePosition: {x: 0.11, y: 0.478, z: -0.02}
   easeFunction: 6
-  easeDuration: 0.5
+  easeDuration: 1
 --- !u!114 &1870922193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18571,7 +18524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.812
+      value: -7.362
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18579,7 +18532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.657
+      value: 15.544
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalRotation.w
