@@ -3854,7 +3854,7 @@ MonoBehaviour:
   deactivateCameraOnStart: 0
   objectToActivate: []
   followPlayer: 1
-  zonePosition: {x: 0.151, y: 0.478, z: 0.204}
+  zonePosition: {x: 0.151, y: 0.478, z: 0.25}
   easeFunction: 6
   easeDuration: 0.5
 --- !u!114 &388825578
@@ -7012,7 +7012,7 @@ MonoBehaviour:
   deactivateCameraOnStart: 0
   objectToActivate: []
   followPlayer: 1
-  zonePosition: {x: 0, y: 0, z: 0}
+  zonePosition: {x: 0.151, y: 0.478, z: -0.29}
   easeFunction: 6
   easeDuration: 0.5
 --- !u!114 &831418708
@@ -9512,7 +9512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e8cd0f22a8d294f9bc62b47fc21126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 1823812651}
 --- !u!1001 &1056101137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13583,7 +13583,7 @@ MonoBehaviour:
   deactivateCameraOnStart: 0
   objectToActivate: []
   followPlayer: 1
-  zonePosition: {x: 0, y: 0, z: 0}
+  zonePosition: {x: 0.29, y: 0.478, z: -0.02}
   easeFunction: 6
   easeDuration: 0.5
 --- !u!114 &1548885955
@@ -13623,7 +13623,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.62, y: 7.06, z: 7.91}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.02}
 --- !u!4 &1550566815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 458136, guid: 1610f7f852090b14db032ba706876325, type: 3}
@@ -15758,7 +15758,7 @@ Transform:
   m_GameObject: {fileID: 1823812651}
   serializedVersion: 2
   m_LocalRotation: {x: 0.65559465, y: -0, z: -0, w: 0.75511307}
-  m_LocalPosition: {x: 0.151, y: 1.9, z: 0.204}
+  m_LocalPosition: {x: 0.151, y: 0.478, z: -0.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16483,7 +16483,7 @@ MonoBehaviour:
   deactivateCameraOnStart: 0
   objectToActivate: []
   followPlayer: 1
-  zonePosition: {x: 0, y: 0, z: 0}
+  zonePosition: {x: 0.11, y: 0.478, z: -0.02}
   easeFunction: 6
   easeDuration: 0.5
 --- !u!114 &1870922193
@@ -16523,7 +16523,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 8.62, y: 7.06, z: 7.91}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.02}
 --- !u!1001 &1881092845
 PrefabInstance:
   m_ObjectHideFlags: 0
