@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 [DefaultExecutionOrder(-10)]
 public class PlayerInputController : MonoBehaviour
 {
+    public static PlayerInputController Instance;
+    
     public Vector2 Move { get; private set; }
     public Vector2 Look { get; private set; }
     public bool Sprint { get; private set; }
@@ -30,6 +32,8 @@ public class PlayerInputController : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
+        
         _playerInput = GetComponent<PlayerInput>();
         var actions = _playerInput.actions;
 

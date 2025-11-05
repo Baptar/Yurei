@@ -20,6 +20,16 @@ public class CameraManager : MonoBehaviour
 
     public void SwitchTo(Camera newCam, bool followPlayer = false, Vector3 zonePosition = default(Vector3), Ease easeFunction = Ease.InOutExpo, float easeDuration = 0.5f)
     {
+        SetNewCameraInputRef(newCam);
+        
+        if (followPlayer)
+        {
+            mainCamera.transform.DOLocalMove(zonePosition, easeDuration).SetEase(easeFunction);            
+        }
+    }
+
+    public void SetNewCameraInputRef(Camera newCam)
+    {
         if (newCam == CurrentCamera) return;
         
         // set the new and previous camera
@@ -27,12 +37,7 @@ public class CameraManager : MonoBehaviour
         PreviousCamera = CurrentCamera;
         CurrentCamera = newCam;
 
-        if (mainCamera == null) return;
-        
-        if (followPlayer)
-        {
-            mainCamera.transform.DOLocalMove(zonePosition, easeDuration).SetEase(easeFunction);            
-        }
+        if (mainCamera == null);
     }
 
     public void MoveCameraTo(Vector3 targetPosition, Quaternion targetRotation, Ease easeFunction = Ease.InOutExpo, float easeDuration = 0.5f, Action onComplete = null)
