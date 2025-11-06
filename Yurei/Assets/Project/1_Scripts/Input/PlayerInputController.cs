@@ -12,12 +12,14 @@ public class PlayerInputController : MonoBehaviour
     public bool ExitBook { get; private set; }
     public bool NextPage { get; private set; }
     public bool PreviousPage { get; private set; }
+    public bool Interact { get; private set; }
     
     
     public event Action OnLookBookPressed;
     public event Action OnExitBookPressed;
     public event Action OnNextPagePressed;
     public event Action OnPreviousPagePressed;
+    public event Action OnInteractPressed;
     
     private PlayerInput _playerInput;
     private InputAction _moveAction;
@@ -27,6 +29,7 @@ public class PlayerInputController : MonoBehaviour
     private InputAction _exitBookAction;
     private InputAction _nextPageAction;
     private InputAction _previousPageAction;
+    private InputAction _interactAction;
 
     private void Awake()
     {
@@ -40,6 +43,7 @@ public class PlayerInputController : MonoBehaviour
         _exitBookAction = actions["ExitBook"];
         _nextPageAction = actions["NextPage"];
         _previousPageAction = actions["PreviousPage"];
+        _interactAction = actions["Interact"];
     }
 
     private void OnEnable()
@@ -77,6 +81,10 @@ public class PlayerInputController : MonoBehaviour
         {
             _previousPageAction.performed += OnPreviousPage;
         }
+        if (_interactAction != null)
+        {
+            _interactAction.performed += OnInteract;
+        }
     }
 
     private void OnDisable()
@@ -113,6 +121,10 @@ public class PlayerInputController : MonoBehaviour
         if (_previousPageAction != null)
         {
             _previousPageAction.performed -= OnPreviousPage;
+        }
+        if (_interactAction != null)
+        {
+            _interactAction.performed -= OnInteract;
         }
     }
 
@@ -154,5 +166,11 @@ public class PlayerInputController : MonoBehaviour
     {
         PreviousPage = ctx.ReadValueAsButton();
         if (ctx.performed) OnPreviousPagePressed?.Invoke();
+    }
+
+    private void OnInteract(InputAction.CallbackContext ctx)
+    {
+        Interact = ctx.ReadValueAsButton();
+        if (ctx.performed) OnInteractPressed?.Invoke();
     }
 }

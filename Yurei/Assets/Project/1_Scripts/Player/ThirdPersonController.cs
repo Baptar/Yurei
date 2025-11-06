@@ -4,31 +4,43 @@ namespace StarterAssets
 {
     [RequireComponent(typeof(CharacterController))]
     [RequireComponent(typeof(PlayerInputController))]
+    [RequireComponent(typeof(BoxCollider))]
     public class ThirdPersonController : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private PlayerInputController _input;
 
+        [Space(10)]
         [Header("Movement Settings")]
         [SerializeField] private float moveSpeed = 2f;
         [SerializeField] private float sprintSpeed = 5.335f;
         [Range(0f, 0.3f)] [SerializeField] private float rotationSmoothTime = 0.12f;
         [SerializeField] private float speedChangeRate = 10f;
 
+        [Space(10)]
         [Header("Gravity Settings")]
         [SerializeField] private float gravity = -15f;
         private float _verticalVelocity;
         private float _terminalVelocity = 53f;
 
+        [Space(10)]
         [Header("Ground Settings")]
         public bool Grounded;
         public float GroundedOffset = -0.14f;
         public float GroundedRadius = 0.28f;
         public LayerMask GroundLayers;
 
+        [Space(10)]
+        [Header("Interaction")]
+        public bool isGrabbingElement = false;
+        public Transform holdPoint;
+        public bool canInteract = true;
+        
+        [Space(10)]
         [Header("Camera Settings")]
         public float CameraDirSmooth = 5f;
 
+        [Space(10)]
         [Header("Audio")]
         [SerializeField] private AudioClip landingAudioClip;
         [SerializeField] private AudioClip[] footstepAudioClips;
@@ -37,6 +49,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private Animator _animator;
         private GameObject _mainCamera;
+        private BoxCollider _boxCollider;
 
         private float _speed;
         private float _animationBlend;
@@ -51,15 +64,20 @@ namespace StarterAssets
         private int _animIDGrounded;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        
+        public IInteractable _currentInteractable;
 
         private void Start()
         {
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<PlayerInputController>();
+            _boxCollider = GetComponent<BoxCollider>();
             _hasAnimator = TryGetComponent(out _animator);
             _mainCamera = Camera.main?.gameObject;
 
             AssignAnimationIDs();
+            
+            _input.OnInteractPressed += OnInteract;
 
             if (_mainCamera != null)
             {
@@ -188,6 +206,42 @@ namespace StarterAssets
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(landingAudioClip, transform.position, footstepAudioVolume);
+            }
+        }
+
+        private bool CanInteract() => canInteract;
+        private void SetCanInteract(bool value)
+        {
+            canInteract = value;
+            _boxCollider.enabled = value;
+        }
+        
+        private void OnInteract()
+        {
+            if (!CanInteract() || _currentInteractable == null) return;
+            
+            _currentInteractable.Interact(this);
+        }
+        
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!canInteract) return;
+            
+            if (other.TryGetComponent(out IInteractable interactable) && interactable.CanInteract)
+            {
+                _currentInteractable = interactable;
+                interactable.Hovered();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (_currentInteractable == null) return;
+            
+            if (other.TryGetComponent(out IInteractable interactable) && _currentInteractable == interactable)
+            {
+                interactable.UnHovered();
+                _currentInteractable = null;
             }
         }
     }
