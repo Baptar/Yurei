@@ -2751,17 +2751,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doublePageMaterialDatas:
   - rightPagesMaterial: {fileID: 2100000, guid: ab8173b88a2118e428c6e36e9f0da605, type: 2}
-    leftPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
+    leftPagesMaterial: {fileID: 0}
+    isAccessible: 1
   - rightPagesMaterial: {fileID: 2100000, guid: 127ba703dca934147b6cf02684f61d5d, type: 2}
     leftPagesMaterial: {fileID: 2100000, guid: d485a34411ecd2349bbe7286e4b4e7dc, type: 2}
-  - rightPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-    leftPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-  - rightPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-    leftPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-  - rightPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-    leftPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-  - rightPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
-    leftPagesMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
+    isAccessible: 1
+  - rightPagesMaterial: {fileID: 8487583350030259624, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
+    leftPagesMaterial: {fileID: 4874126678125670354, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
+    isAccessible: 1
+  - rightPagesMaterial: {fileID: 0}
+    leftPagesMaterial: {fileID: -5437306919706194135, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
+    isAccessible: 1
   emptyPageMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
   pagePrefab: {fileID: 7647141888527236377, guid: 736f7138d80c45547835fbd3373fcbdb, type: 3}
   pageSpawnPoint: {fileID: 450058045}
