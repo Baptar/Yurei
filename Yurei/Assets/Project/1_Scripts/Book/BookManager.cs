@@ -13,13 +13,12 @@ public class BookManager : MonoBehaviour
     {
         public Material rightPagesMaterial;
         public Material leftPagesMaterial;
+        public bool isAccessible = true;
     }
-    
-    [Header("Player Controller")]
-    [SerializeField] private PlayerInputController _input;
     
     [Space(5)]
     [Header("Pages Materials")]
+    [Tooltip("this is an array of pages : a page is defined by its right and left material")]
     [SerializeField] private DoublePageMaterialData[] doublePageMaterialDatas;
     [SerializeField] private Material emptyPageMaterial;
     
@@ -32,7 +31,8 @@ public class BookManager : MonoBehaviour
     
     [Space(5)]
     [Header("DEBUG")]
-    public int currentPageNumber = 0;
+    public int currentRightPageNumber = 0;
+    public int currentLeftPageNumber = 1;
     public int pageCount;
     public int numberTurningPageToLeft;
     public int numberTurningPageToRight;
@@ -42,20 +42,28 @@ public class BookManager : MonoBehaviour
     
     private Vector3 lastCameraPosition;
     private Quaternion lastCameraRotation;
+    private PlayerInputController _input;
 
     private void Awake() => Instance = this;
 
     private void Start()
     {
+        pageCount = doublePageMaterialDatas.Length;
+        
+        SetMaterialRightPage(pageCount > 0 ? doublePageMaterialDatas[0].rightPagesMaterial : emptyPageMaterial);
+        SetMaterialLeftPage(pageCount > 1 ? doublePageMaterialDatas[1].leftPagesMaterial : emptyPageMaterial);
+        
+        _input = PlayerInputController.Instance;
+        if (_input == null)
+        {
+            Debug.LogWarning("PlayerInputController is null");
+            return;
+        }
+        
         _input.OnLookBookPressed += HandleLookBook;
         _input.OnExitBookPressed += HandleExitBook;
         _input.OnNextPagePressed += HandleNextPage;
         _input.OnPreviousPagePressed += HandlePreviousPage;
-        
-        pageCount = doublePageMaterialDatas.Length - 1;
-        
-        SetMaterialRightPage(pageCount == 0 ? emptyPageMaterial : doublePageMaterialDatas[0].rightPagesMaterial);
-        SetMaterialLeftPage(pageCount == 0 ? emptyPageMaterial : doublePageMaterialDatas[0].leftPagesMaterial);
     }
 
     /// <summary>
@@ -63,8 +71,8 @@ public class BookManager : MonoBehaviour
     /// </summary>
     private bool CanLookBook() => !isLookingBook && !isCameraMoving;
     private bool CanExitBook() => isLookingBook && numberTurningPageToLeft <= 0 && numberTurningPageToRight <= 0 && !isCameraMoving;
-    private bool CanNextPage() => isLookingBook && numberTurningPageToLeft <= 0 && currentPageNumber < pageCount;
-    private bool CanPreviousPage() => isLookingBook && numberTurningPageToRight <= 0 && currentPageNumber > 0;
+    private bool CanNextPage() => isLookingBook && numberTurningPageToLeft <= 0 && currentLeftPageNumber < pageCount - 1;
+    private bool CanPreviousPage() => isLookingBook && numberTurningPageToRight <= 0 && currentRightPageNumber > 0;
 
     /// <summary>
     /// Handle functions
@@ -107,7 +115,7 @@ public class BookManager : MonoBehaviour
             });
     }
     
-    private void ExitBook(Action onComplete = null)
+    private void ExitBook()
     {
         isCameraMoving = true;
         isLookingBook = false;
@@ -121,11 +129,11 @@ public class BookManager : MonoBehaviour
     /// Turn to the next page
     /// steps :
     ///     - init page position to start
-    ///     - copy "left" on "right of moving page"
+    ///     - copy "left" on "left of moving page"
     ///     - change "left" to the next left page 
-    ///     - change " left of moving page" to the next right page
+    ///     - change " right of moving page" to the next right page
     ///     - rotate our page
-    ///     - change "right" on "left of moving page"
+    ///     - change "right" on "right of moving page"
     ///     - remove moving page
     /// </summary>
     private void NextPage(Action onComplete = null)
@@ -133,22 +141,35 @@ public class BookManager : MonoBehaviour
         GameObject go = Instantiate(pagePrefab, pageSpawnPoint.position, pageSpawnPoint.rotation);
         if (go.TryGetComponent(out PageHelper page))
         {
-            // Get element we'll need
-            Material actualLeftMaterial = GetLeftPageMaterial();
-            Material nextLeftMaterial = GetNextLeftPageMaterial();
-            Material nextRightMaterial = GetNextRightPageMaterial();
+            Material nextLeftMaterial = null;
+            Material nextRightMaterial = null;
+            int nextRightIndex = -1;
+            int nextLeftIndex = -1;
             
-            currentPageNumber++;
+            // Get element we'll need
+            GetLeftPageMaterial(out var actualLeftMaterial);
+            GetNextLeftPageMaterial(ref nextLeftMaterial, ref nextLeftIndex, out var isNextLeft);
+            GetNextRightPageMaterial(ref nextRightMaterial, ref nextRightIndex, out var isNextRight);
+            
+            if (!isNextLeft || !isNextRight)
+            { 
+                Debug.LogWarning("Can't PreviousPage function : " + isNextLeft + "; " + isNextRight);
+                Destroy(go);
+                return;
+            }
+            
+            currentLeftPageNumber = nextLeftIndex;
+            currentRightPageNumber = nextRightIndex;
             numberTurningPageToRight++;
             
-            // copy "left" on "right of moving page"
-            page.SetMaterialRightMovingPage(actualLeftMaterial);
+            // copy "left" on "left of moving page"
+            page.SetMaterialLeftMovingPage(actualLeftMaterial);
             
             // change "left" to the next left page 
             SetMaterialLeftPage(nextLeftMaterial);
             
-            // change " left of moving page" to the next right page
-            page.SetMaterialLeftMovingPage(nextRightMaterial);
+            // change "right of moving page" to the next right page
+            page.SetMaterialRightMovingPage(nextRightMaterial);
 
             page.PlayPageAnimation(true, onComplete);
         }
@@ -160,11 +181,11 @@ public class BookManager : MonoBehaviour
     /// Turn to the previous page
     /// steps :
     ///     - init page position to end
-    ///     - copy "right" on "left of moving page"
+    ///     - copy "right" on "right of moving page"
     ///     - change "right" to the next right page 
-    ///     - change " right of moving page" to the next left page
+    ///     - change " left of moving page" to the next left page
     ///     - rotate our page with reverse animation
-    ///     - change "left" on "right of moving page"
+    ///     - change "left" on "left of moving page"
     ///     - remove moving page
     /// </summary>
     private void PreviousPage(Action onComplete = null)
@@ -172,22 +193,35 @@ public class BookManager : MonoBehaviour
         GameObject go = Instantiate(pagePrefab, pageSpawnPoint.position, pageSpawnPoint.rotation);
         if (go.TryGetComponent(out PageHelper page))
         {
-            // Get element we'll need
-            Material actualRightMaterial = GetRightPageMaterial();
-            Material previousLeftMaterial = GetPreviousLeftPageMaterial();
-            Material previousRightMaterial = GetPreviousRightPageMaterial();
+            Material previousLeftMaterial = null;
+            Material previousRightMaterial = null;
+            int previousRightIndex = -1;
+            int previousLeftIndex = -1;
             
-            currentPageNumber--;
+            // Get element we'll need
+            GetRightPageMaterial(out var actualRightMaterial);
+            GetPreviousLeftPageMaterial(ref previousLeftMaterial, ref previousLeftIndex, out var isPreviousLeft);
+            GetPreviousRightPageMaterial(ref previousRightMaterial, ref previousRightIndex, out var isPreviousRight);
+
+            if (!isPreviousLeft || !isPreviousRight)
+            { 
+                Debug.LogWarning("Can't PreviousPage function : " + isPreviousLeft + "; " + isPreviousRight);
+                Destroy(go);
+                return;
+            }
+            
+            currentRightPageNumber = previousRightIndex;
+            currentLeftPageNumber = previousLeftIndex;
             numberTurningPageToLeft++;
             
-            // copy "right" on "left of moving page"
-            page.SetMaterialLeftMovingPage(actualRightMaterial);
+            // copy "right" on "right of moving page"
+            page.SetMaterialRightMovingPage(actualRightMaterial);
             
             // change "right" to the previous right page 
             SetMaterialRightPage(previousRightMaterial);
             
-            // change " right of moving page" to the previous left page
-            page.SetMaterialRightMovingPage(previousLeftMaterial);
+            // change " left of moving page" to the previous left page
+            page.SetMaterialLeftMovingPage(previousLeftMaterial);
 
             page.PlayPageAnimation(false, onComplete);
         }
@@ -198,8 +232,8 @@ public class BookManager : MonoBehaviour
     /// <summary>
     /// Helpers functions
     /// </summary>
-    private Material GetLeftPageMaterial() => bookBase.materials[0];
-    private Material GetRightPageMaterial() => bookBase.materials[2];
+    private void GetLeftPageMaterial(out Material mat) => mat = bookBase.materials[0] == null ? emptyPageMaterial : bookBase.materials[0];
+    private void GetRightPageMaterial(out Material mat) => mat = bookBase.materials[2] == null ? emptyPageMaterial : bookBase.materials[2];
     public void SetMaterialLeftPage(Material material)
     {
         Material[] mats = bookBase.materials;
@@ -214,27 +248,116 @@ public class BookManager : MonoBehaviour
         bookBase.materials = mats;
     }
 
-    private Material GetPreviousRightPageMaterial()
+    private void GetPreviousRightPageMaterial(ref Material mat, ref int indexPreviousPage, out bool isPreviousRight)
     {
-        return currentPageNumber > 0 ? doublePageMaterialDatas[currentPageNumber - 1].rightPagesMaterial : emptyPageMaterial;
+        // error case
+        if (currentRightPageNumber <= 0)
+        {
+            Debug.LogWarning("issue with GetPreviousRightPageMaterial function");
+            isPreviousRight = false;
+            return;
+        }
+        
+        // get the previous accessible page
+        for (int i = currentRightPageNumber - 1; i >= 0; i--)
+        {
+            if (doublePageMaterialDatas[i].isAccessible)
+            {
+                indexPreviousPage = i;
+                mat = doublePageMaterialDatas[i].rightPagesMaterial == null ? emptyPageMaterial : doublePageMaterialDatas[i].rightPagesMaterial;
+                isPreviousRight = true;
+                return;
+            }
+        }
+        
+        // case there is no previous page that is accessible
+        Debug.LogWarning("no previous accessible right page");
+        isPreviousRight = false;
     }
     
-    private Material GetNextRightPageMaterial()
+    private void GetNextRightPageMaterial(ref Material mat, ref int indexNextPage, out bool isNextRight)
     {
-        return currentPageNumber < (doublePageMaterialDatas.Length - 1) ? doublePageMaterialDatas[currentPageNumber + 1].rightPagesMaterial : emptyPageMaterial;
+        // error case
+        if (currentRightPageNumber >= pageCount)
+        {
+            Debug.LogWarning("issue with GetNextRightPageMaterial function");
+            isNextRight = false;
+            return;
+        }
+        
+        // get the previous accessible page
+        for (int i = currentRightPageNumber + 1; i < pageCount; i++)
+        {
+            if (doublePageMaterialDatas[i].isAccessible)
+            {
+                indexNextPage = i;
+                mat = doublePageMaterialDatas[i].rightPagesMaterial == null ? emptyPageMaterial : doublePageMaterialDatas[i].rightPagesMaterial;
+                isNextRight = true;
+                return;
+            }
+        }
+        
+        // case there is no previous page that is accessible
+        Debug.LogWarning("no next accessible right page");
+        isNextRight = false;
     }
 
-    private Material GetPreviousLeftPageMaterial()
+    private void GetPreviousLeftPageMaterial(ref Material mat, ref int indexPreviousPage, out bool isPreviousLeft)
     {
-        return currentPageNumber > 0 ? doublePageMaterialDatas[currentPageNumber - 1].leftPagesMaterial : emptyPageMaterial;
+        // error case
+        if (currentLeftPageNumber <= 0)
+        {
+            Debug.LogWarning("issue with GetPreviousLeftPageMaterial function");
+            isPreviousLeft = false;
+            return;
+        }
+        
+        // get the previous accessible page
+        for (int i = currentLeftPageNumber - 1; i >= 0; i--)
+        {
+            if (doublePageMaterialDatas[i].isAccessible)
+            {
+                indexPreviousPage = i;
+                mat = doublePageMaterialDatas[i].leftPagesMaterial == null ? emptyPageMaterial : doublePageMaterialDatas[i].leftPagesMaterial;
+                isPreviousLeft = true;
+                return;
+            }
+        }
+        
+        // case there is no previous page that is accessible
+        Debug.LogWarning("no previous accessible left page");
+        isPreviousLeft = false;
     }
     
-    private Material GetNextLeftPageMaterial()
+    private void GetNextLeftPageMaterial(ref Material mat, ref int indexNextPage, out bool isNextLeft)
     {
-        return currentPageNumber < (doublePageMaterialDatas.Length - 1) ? doublePageMaterialDatas[currentPageNumber + 1].leftPagesMaterial : emptyPageMaterial;
+        // error case
+        if (currentLeftPageNumber >= pageCount)
+        {
+            Debug.LogWarning("issue with GetNextLeftPageMaterial function");
+            isNextLeft = false;
+            return;
+        }
+        
+        // get the previous accessible page
+        for (int i = currentLeftPageNumber + 1; i < pageCount; i++)
+        {
+            if (doublePageMaterialDatas[i].isAccessible)
+            {
+                indexNextPage = i;
+                mat = doublePageMaterialDatas[i].leftPagesMaterial == null ? emptyPageMaterial : doublePageMaterialDatas[i].leftPagesMaterial;
+                isNextLeft = true;
+                return;
+            }
+        }
+        
+        // case there is no previous page that is accessible
+        Debug.LogWarning("no next accessible left page");
+        isNextLeft = false;
     }
     
-    public int GetCurrentPageNumber() => currentPageNumber;
+    public int GetCurrentRightPageNumber() => currentRightPageNumber;
+    public int GetCurrentLeftPageNumber() => currentLeftPageNumber;
 
     /// <summary>
     /// On Player finish page

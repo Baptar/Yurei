@@ -165,6 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f1302f3b532549a1e267bd2ff7109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinnedMeshRendererLeft: {fileID: 2844055440808264980}
-  skinnedMeshRendererRight: {fileID: 4229453462959440875}
+  skinnedMeshRendererLeft: {fileID: 4229453462959440875}
+  skinnedMeshRendererRight: {fileID: 2844055440808264980}
   animator: {fileID: 6468626838190995932}
