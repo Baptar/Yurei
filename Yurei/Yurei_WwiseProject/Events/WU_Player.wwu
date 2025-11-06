@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{875972E4-C215-4306-ADB6-B184F1A15653}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="WU_Player" ID="{875972E4-C215-4306-ADB6-B184F1A15653}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="18"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_Footstep" ID="{E48D4166-4FBF-4144-86D2-1B4F66AFC9A3}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

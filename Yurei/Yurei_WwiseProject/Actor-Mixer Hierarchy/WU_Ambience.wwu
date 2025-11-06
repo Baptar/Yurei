@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="WU_Ambience" ID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="8"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="WU_Ponctual_Objects" ID="{9B2BD863-A6DA-4298-B1CD-892CBF22CB74}" PersistMode="Reference"/>
+				<WorkUnit Name="WU_Pads" ID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

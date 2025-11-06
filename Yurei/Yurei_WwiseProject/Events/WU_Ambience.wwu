@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="WU_Ambience" ID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="8"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="WU_Pads" ID="{5FF2BC14-1C95-4F12-B9CE-D3E443DD93E2}" PersistMode="Reference"/>
+				<WorkUnit Name="WU_Ponctual_Objects" ID="{13F6C7FA-CA7D-4C1C-85E5-92DBC0F94607}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,19 +1,19 @@
 {
  "SoundBanksInfo": {
-  "Platform": "Mac",
-  "BasePlatform": "Mac",
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
   "SchemaVersion": "16",
   "SoundBankVersion": "154",
   "SoundBanks": [
    {
-    "Id": "1355168291",
+    "Id": "1755220707",
     "Type": "User",
-    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "GUID": "{C38E3004-4591-4E38-8434-CF3D4F2F1E9B}",
     "Language": "SFX",
-    "Hash": "{411AD75B-2CC9-68D0-6C56-2B87F74C9BBD}",
-    "ObjectPath": "Init",
-    "ShortName": "Init",
-    "Path": "Init.bnk",
+    "Hash": "{2CF235F8-1E3B-49B8-6103-A4C68352784A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBank_Proto",
+    "ShortName": "SoundBank_Proto",
+    "Path": "SoundBank_Proto.bnk",
     "Plugins": {
      "Custom": [
       {
@@ -65,24 +65,6 @@
        "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
-      }
-     ],
-     "AudioDevices": [
-      {
-       "Id": "2317455096",
-       "Name": "No_Output",
-       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
-       "GUID": "{45A8CC5B-0393-49BA-9B5F-72E33F07F6F6}",
-       "LibName": "No Output",
-       "LibId": "11862023"
-      },
-      {
-       "Id": "3859886410",
-       "Name": "System",
-       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
-       "GUID": "{28E9C3D8-8084-4600-8DE2-FF2B1735DB14}",
-       "LibName": "System",
-       "LibId": "11403271"
       }
      ]
     },
@@ -236,63 +218,9 @@
        ]
       }
      }
-    ],
-    "SwitchGroups": [
-     {
-      "Id": "1295475536",
-      "Name": "PlayerCycle",
-      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle",
-      "GUID": "{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}",
-      "Switches": [
-       {
-        "Id": "712161704",
-        "Name": "Run",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Run",
-        "GUID": "{A4B19789-DA24-4379-9C2E-5965847713DA}"
-       },
-       {
-        "Id": "1874288895",
-        "Name": "Idle",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Idle",
-        "GUID": "{B2894C90-A958-484D-AACB-622E4E741BC4}"
-       },
-       {
-        "Id": "2108779966",
-        "Name": "Walk",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Walk",
-        "GUID": "{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"
-       }
-      ]
-     },
-     {
-      "Id": "3865314626",
-      "Name": "Material",
-      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
-      "GUID": "{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}",
-      "Switches": [
-       {
-        "Id": "787898836",
-        "Name": "Snow",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Snow",
-        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"
-       },
-       {
-        "Id": "2144363834",
-        "Name": "Rock",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Rock",
-        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"
-       },
-       {
-        "Id": "2934663280",
-        "Name": "Organic",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Organic",
-        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}"
-       }
-      ]
-     }
     ]
    }
   ],
-  "FileHash": "{059A4D92-20C6-D82B-174F-CC136F1C394C}"
+  "FileHash": "{B683C8CB-C71A-2445-2048-B7E4F5B33AC9}"
  }
 }

@@ -1,7 +1,7 @@
 {
  "PluginInfo": {
-  "Platform": "Mac",
-  "BasePlatform": "Mac",
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
   "PluginLibs": [
    {
     "LibName": "Wwise Compressor",
@@ -42,6 +42,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{8F6E23C2-5F3F-7B43-F275-702AE58E4EF0}"
+  "FileHash": "{BD97E4C2-FA06-E6A1-71C0-A3BC5D7F0D76}"
  }
 }

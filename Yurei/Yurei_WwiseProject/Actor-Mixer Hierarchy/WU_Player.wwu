@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="WU_Player" ID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="18"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchContainer Name="Player_Footsteps" ID="{ECBE46D3-74B9-4BBF-8E5F-2FD49451C2C2}" ShortID="286446459">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="PlayerCycle" ID="{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}" WorkUnitID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="Walk" ID="{6564AF14-2C7E-41F1-B734-2D36A3282458}" ShortID="307643761">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Material" ID="{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}" WorkUnitID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Rock_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}" ShortID="392233748">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Snow_Walk" ID="{404F36D1-9F75-4528-BCC1-F4D49868C11E}" ShortID="337607157">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Organic_Walk" ID="{3E7B05AE-0E00-4BD5-A6AA-A56D5CF81051}" ShortID="780591212">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Rock_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Organic_Walk" ID="{3E7B05AE-0E00-4BD5-A6AA-A56D5CF81051}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Snow_Walk" ID="{404F36D1-9F75-4528-BCC1-F4D49868C11E}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Snow" ID="{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"/>
+										<ItemList>
+											<ItemRef Name="Snow_Walk" ID="{404F36D1-9F75-4528-BCC1-F4D49868C11E}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Organic" ID="{78D0425E-141E-44C9-9273-EA37FE163D04}"/>
+										<ItemList>
+											<ItemRef Name="Organic_Walk" ID="{3E7B05AE-0E00-4BD5-A6AA-A56D5CF81051}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Rock" ID="{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"/>
+										<ItemList>
+											<ItemRef Name="Rock_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Run" ID="{BF74D0DC-9602-4107-9602-36DA1F820559}" ShortID="967203296">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Material" ID="{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}" WorkUnitID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Rock_Run" ID="{36276235-D4DA-424A-8167-C741F8A205B9}" ShortID="229630297">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Snow_Run" ID="{0DCA51B2-676A-4716-BDC9-70BA9BE39400}" ShortID="322959145">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Organic_Run" ID="{43C9153C-5118-4B51-8A45-4EEF2E1B8CAA}" ShortID="469817986">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Rock_Run" ID="{36276235-D4DA-424A-8167-C741F8A205B9}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Organic_Run" ID="{43C9153C-5118-4B51-8A45-4EEF2E1B8CAA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Snow_Run" ID="{0DCA51B2-676A-4716-BDC9-70BA9BE39400}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Snow" ID="{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"/>
+										<ItemList>
+											<ItemRef Name="Snow_Run" ID="{0DCA51B2-676A-4716-BDC9-70BA9BE39400}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Organic" ID="{78D0425E-141E-44C9-9273-EA37FE163D04}"/>
+										<ItemList>
+											<ItemRef Name="Organic_Run" ID="{43C9153C-5118-4B51-8A45-4EEF2E1B8CAA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Rock" ID="{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"/>
+										<ItemList>
+											<ItemRef Name="Rock_Run" ID="{36276235-D4DA-424A-8167-C741F8A205B9}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Walk" ID="{6564AF14-2C7E-41F1-B734-2D36A3282458}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Run" ID="{BF74D0DC-9602-4107-9602-36DA1F820559}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Run" ID="{A4B19789-DA24-4379-9C2E-5965847713DA}"/>
+								<ItemList>
+									<ItemRef Name="Run" ID="{BF74D0DC-9602-4107-9602-36DA1F820559}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Walk" ID="{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"/>
+								<ItemList>
+									<ItemRef Name="Walk" ID="{6564AF14-2C7E-41F1-B734-2D36A3282458}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

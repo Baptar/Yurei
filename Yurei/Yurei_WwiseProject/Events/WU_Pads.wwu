@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5FF2BC14-1C95-4F12-B9CE-D3E443DD93E2}" SchemaVersion="123" RootDocumentID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" ParentDocumentID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}">
+	<Events>
+		<WorkUnit Name="WU_Pads" ID="{5FF2BC14-1C95-4F12-B9CE-D3E443DD93E2}" OwnerID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_Forest_Amb" ID="{98F61612-660A-47DE-B91A-19DAA59567E8}"/>
+				<Event Name="Play_Industrial_Amb" ID="{6BD70AFE-1F01-4A1F-9E57-534C1E96B496}"/>
+				<Event Name="Play_Mountain_Amb" ID="{696CBCE7-6CDC-44CB-9EAB-9B021D4CC088}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{13F6C7FA-CA7D-4C1C-85E5-92DBC0F94607}" SchemaVersion="123" RootDocumentID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" ParentDocumentID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}">
+	<Events>
+		<WorkUnit Name="WU_Ponctual_Objects" ID="{13F6C7FA-CA7D-4C1C-85E5-92DBC0F94607}" OwnerID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_MusicBox_Loop" ID="{49EF1D86-B87E-43DB-B774-5EA81556CDB1}"/>
+				<Event Name="Play_Propeller_Loop" ID="{B24BB8D8-CCEC-428C-95FE-946AB4735864}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

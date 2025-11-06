@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}" SchemaVersion="123">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="PlayerCycle" ID="{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}">
+					<ChildrenList>
+						<Switch Name="Walk" ID="{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"/>
+						<Switch Name="Run" ID="{A4B19789-DA24-4379-9C2E-5965847713DA}"/>
+						<Switch Name="Idle" ID="{B2894C90-A958-484D-AACB-622E4E741BC4}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Material" ID="{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}">
+					<ChildrenList>
+						<Switch Name="Organic" ID="{78D0425E-141E-44C9-9273-EA37FE163D04}"/>
+						<Switch Name="Rock" ID="{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"/>
+						<Switch Name="Snow" ID="{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
