@@ -3494,8 +3494,8 @@
     "m_ObjectId": "2386bea704a8422fb721dd93b018451d",
     "m_Title": "rimLight and cerne",
     "m_Position": {
-        "x": 4855.99951171875,
-        "y": -776.9999389648438
+        "x": 4856.0,
+        "y": -777.0
     }
 }
 
@@ -4379,8 +4379,8 @@
     "m_ObjectId": "37afeb81140345c9bcf17011730a74c7",
     "m_Title": "orientation",
     "m_Position": {
-        "x": 938.000244140625,
-        "y": 1126.0001220703125
+        "x": 938.0,
+        "y": 1126.0
     }
 }
 
@@ -6371,8 +6371,8 @@
     "m_ObjectId": "69deb9a161cd4e5eb603a5dfadda19a4",
     "m_Title": "revoir proportion shadow / atténuation",
     "m_Position": {
-        "x": -3270.000244140625,
-        "y": -161.00003051757813
+        "x": -3270.0,
+        "y": -161.0
     }
 }
 
@@ -7141,7 +7141,7 @@
     "m_ObjectId": "7a3c217fe2364d7ba0b211bcdfe2d71e",
     "m_Title": "New Group",
     "m_Position": {
-        "x": -1156.0001220703125,
+        "x": -1156.0,
         "y": -687.0
     }
 }
@@ -7620,8 +7620,8 @@
     "m_ObjectId": "883557fdf18f49668665621ca6b62e71",
     "m_Title": "frequency",
     "m_Position": {
-        "x": 1207.0003662109375,
-        "y": 770.0001220703125
+        "x": 1207.0,
+        "y": 770.0
     }
 }
 
@@ -7882,7 +7882,7 @@
     "m_Title": "New Group",
     "m_Position": {
         "x": 2621.0,
-        "y": 94.00000762939453
+        "y": 94.0
     }
 }
 
@@ -9083,8 +9083,8 @@
     "m_ObjectId": "a8ec2d70bb5f4970a6df1ebcac5e25ad",
     "m_Title": "NdotL",
     "m_Position": {
-        "x": -1910.0001220703125,
-        "y": -161.00003051757813
+        "x": -1910.0,
+        "y": -161.0
     }
 }
 
@@ -11717,7 +11717,7 @@
     "m_Title": "New Group",
     "m_Position": {
         "x": 1927.0,
-        "y": 3370.000244140625
+        "y": 3370.0
     }
 }
 

@@ -24,8 +24,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 1595eaab944f4034d9bd37826df59ffe, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _COLOR
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -68,7 +67,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _COLOR: 1
+    - _COLOR: 0
     - _DistanceAtten: 0
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -77,6 +76,7 @@ Material:
     - _cross_hatch_frequency: 0.03
     - _direction_strip: 0
     - _rimlightPower: 1.39
+    - _step: 0.8
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
     - _Color_1: {r: 1, g: 0, b: 0, a: 0}
@@ -84,9 +84,9 @@ Material:
     - _Direction: {r: -1.13, g: 0, b: 0, a: 0}
     - _WorldPos: {r: 0, g: 0, b: 0, a: 0}
     - _offset: {r: 0, g: 1, b: 0, a: 0}
-    - _tiling: {r: 17.87, g: 15.98, b: 0, a: 0}
-    - _tiling_1: {r: 3.69, g: 5, b: 0, a: 0}
+    - _tiling: {r: 10.86, g: 5, b: 0, a: 0}
+    - _tiling_1: {r: 2.16, g: 5, b: 0, a: 0}
     - _tiling_2: {r: 23.98, g: 9.25, b: 0, a: 0}
-    - _tiling_3: {r: 10, g: 10, b: 0, a: 0}
+    - _tiling_3: {r: 47.43, g: -2.96, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

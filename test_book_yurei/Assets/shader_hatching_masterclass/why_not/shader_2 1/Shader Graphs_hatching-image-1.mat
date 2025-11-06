@@ -71,18 +71,18 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ShadowAtten: 0
-    - _contrast: 1
+    - _contrast: 0.6
     - _cross_hatch_frequency: -0.1
-    - _direction_strip: 179.89
+    - _direction_strip: 178.21
     - _rimlightPower: 2.13
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
     - _Direction: {r: 0, g: 0, b: 0, a: 0}
     - _WorldPos: {r: -0.1, g: 0, b: 0, a: 0}
-    - _offset: {r: 3.5, g: 4.9, b: 0, a: 0}
-    - _tiling: {r: -26.4, g: -22.6, b: 0, a: 0}
-    - _tiling_1: {r: 1.5, g: 1.5, b: 0, a: 0}
-    - _tiling_2: {r: -40.62, g: 42.11, b: 0, a: 0}
-    - _tiling_3: {r: 1, g: 1, b: 0, a: 0}
+    - _offset: {r: 9.1, g: 4.9, b: 0, a: 0}
+    - _tiling: {r: -37.4, g: -22.6, b: 0, a: 0}
+    - _tiling_1: {r: -0.5, g: 1.5, b: 0, a: 0}
+    - _tiling_2: {r: 27.77, g: 9.9, b: 0, a: 0}
+    - _tiling_3: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
