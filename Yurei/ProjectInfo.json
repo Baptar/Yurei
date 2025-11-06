@@ -1,0 +1,29 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Yurei_Proto_WwiseSession",
+   "GUID": "{07ECAA12-3E9A-47C1-B5FF-1153519EE9C5}",
+   "Generator": "2024.1.9.8920"
+  },
+  "CacheRoot": "../../../WwiseProjects/Yurei_Proto_WwiseSession/.cache",
+  "Platforms": [
+   {
+    "Name": "Windows",
+    "GUID": "{026E942E-341B-492C-8FBB-D7EB9ABA5E08}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Assets/StreamingAssets/Audio/GeneratedSoundBanks"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{8AC11C40-4637-4569-8674-AB5D5D541D9F}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{FF5D1F51-1C9D-CE9E-FB5E-DBD611BD89ED}"
+ }
+}
