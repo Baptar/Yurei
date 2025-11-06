@@ -29,9 +29,8 @@ public class PageHelper : MonoBehaviour
     {
         onCompleteAction?.Invoke();
         onCompleteAction = null;
-
-        Debug.Log("AfterANimationMoveToRight");
-        BookManager.Instance.SetMaterialRightPage(GetMaterialLeftMovingPage());
+        
+        BookManager.Instance.SetMaterialRightPage(GetMaterialRightMovingPage());
         BookManager.Instance.numberTurningPageToRight--;
         gameObject.SetActive(false);
         Destroy(gameObject, 0.5f);
@@ -41,9 +40,8 @@ public class PageHelper : MonoBehaviour
     {
         onCompleteAction?.Invoke();
         onCompleteAction = null;
-
-        Debug.Log("AfterANimationMoveToLeft");
-        BookManager.Instance.SetMaterialLeftPage(GetMaterialRightMovingPage());
+        
+        BookManager.Instance.SetMaterialLeftPage(GetMaterialLeftMovingPage());
         BookManager.Instance.numberTurningPageToLeft--;
         gameObject.SetActive(false);
         Destroy(gameObject, 0.5f);
