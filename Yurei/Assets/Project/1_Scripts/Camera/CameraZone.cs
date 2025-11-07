@@ -24,6 +24,11 @@ public class CameraZone : MonoBehaviour
     [SerializeField] private Ease easeFunction = Ease.InOutExpo;
     [SerializeField] private float easeDuration = 0.5f;
     
+    [Space(10)]
+    [Header("Camera Listener")]
+    public Ease easeCameraListener = Ease.InOutExpo;
+    public float timeCameraListener = 1.0f;
+    
     /*[Space(10)]
     [Header("render texture options")]
     [SerializeField] private RawImage renderTexture;
@@ -55,6 +60,7 @@ public class CameraZone : MonoBehaviour
             BookManager.Instance.OnPlayerFinishedPage(pageNumberAssociated < BookManager.Instance.GetCurrentRightPageNumber(),
                 () =>
                 {
+                    ListenerManager.Instance.MoveListenerTo(this);
                     CameraManager.Instance.SwitchTo(zoneCamera, true, zonePosition, easeFunction, easeDuration);
                 });
         }
@@ -62,13 +68,14 @@ public class CameraZone : MonoBehaviour
         else
         {
             CameraManager.Instance.SwitchTo(zoneCamera, followPlayer, zonePosition, easeFunction, easeDuration);
+            ListenerManager.Instance.MoveListenerTo(this);
             //LightZoneManager.Instance.OnEnterNewZone(this);
             ManagerObjectToActivate(true);
             //ManageRenderTexturesLight(true);
         }
     }
 
-    public void ManagerObjectToActivate(bool activate)
+    private void ManagerObjectToActivate(bool activate)
     {
         foreach (GameObject obj in objectToActivate)
             obj.SetActive(activate);
@@ -80,4 +87,6 @@ public class CameraZone : MonoBehaviour
 
         renderTexture.DOColor(activate? Color.white : colorDeactivated, 0.2f);
     }*/
+
+    public Camera GetCameraAssociated() => zoneCamera;
 }
