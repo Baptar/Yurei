@@ -3,8 +3,28 @@
 	<Events>
 		<WorkUnit Name="WU_Ponctual_Objects" ID="{13F6C7FA-CA7D-4C1C-85E5-92DBC0F94607}" OwnerID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="Play_MusicBox_Loop" ID="{49EF1D86-B87E-43DB-B774-5EA81556CDB1}"/>
-				<Event Name="Play_Propeller_Loop" ID="{B24BB8D8-CCEC-428C-95FE-946AB4735864}"/>
+				<Event Name="Play_MusicBox_Loop" ID="{49EF1D86-B87E-43DB-B774-5EA81556CDB1}">
+					<ChildrenList>
+						<Action Name="" ID="{477565AE-60BA-4220-8E70-DD7547C2DE04}" ShortID="970183086">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicBox_Loop" ID="{AAC8D78B-2ADE-4525-880A-FBBFA903121F}" WorkUnitID="{9B2BD863-A6DA-4298-B1CD-892CBF22CB74}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Propeller_Loop" ID="{B24BB8D8-CCEC-428C-95FE-946AB4735864}">
+					<ChildrenList>
+						<Action Name="" ID="{E2EE9ABC-4801-4A73-946C-6CB5B19ECE5F}" ShortID="39748270">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Propeller_Loop" ID="{18751B94-33FD-4050-8901-79773A248E7A}" WorkUnitID="{9B2BD863-A6DA-4298-B1CD-892CBF22CB74}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

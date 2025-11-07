@@ -1,0 +1,306 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{EE7E2E29-E33A-E561-53D3-5641FDFD10DE}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "101835093",
+       "Name": "Guitar Distortion (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicBus\\JingleBus\\[Effect Slot [0]: (Guitar Distortion)]\\Guitar Distortion (Custom)",
+       "GUID": "{C9203F2A-6B37-497F-87FD-3A537CA8E21D}",
+       "LibName": "Wwise Guitar Distortion",
+       "LibId": "8257539"
+      },
+      {
+       "Id": "193924255",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
+       "GUID": "{74A3E342-8E44-45FC-AC1A-47EB0383121D}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1416967478",
+       "Name": "All_Buttons_IN",
+       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\All_Buttons_IN",
+       "GUID": "{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      },
+      {
+       "Id": "2891462749",
+       "Name": "Room_Medium_High_Absorbtion",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium_High_Absorbtion",
+       "GUID": "{E22DBBB6-7656-4B93-A28D-C003FD416889}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3216246379",
+       "Name": "Space_Dreaming",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
+       "GUID": "{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3442768367",
+       "Name": "Hall_Large_Dark",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Halls\\Hall_Large_Dark",
+       "GUID": "{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\No_Output",
+       "GUID": "{45A8CC5B-0393-49BA-9B5F-72E33F07F6F6}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Audio Devices\\Default Work Unit\\System",
+       "GUID": "{28E9C3D8-8084-4600-8DE2-FF2B1735DB14}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "590867056",
+      "Name": "JingleBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicBus\\JingleBus",
+      "GUID": "{350A9A46-57D3-4F23-82B3-BC03C3775681}",
+      "Color": "14",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "101835093"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1416967478"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "3633416828",
+        "Name": "Hall",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB\\Hall",
+        "GUID": "{168AA74E-F128-4A65-AB94-C40BE7738E4E}",
+        "Color": "4"
+       }
+      ]
+     },
+     {
+      "Id": "695384145",
+      "Name": "RVB",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB",
+      "GUID": "{4BF5A1F5-63EC-47CA-94DA-534CB41FC8E7}",
+      "Color": "4"
+     },
+     {
+      "Id": "1372881427",
+      "Name": "UIBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\UIBus",
+      "GUID": "{CA20ED2A-D11E-4DFF-AE57-2E3114B13AA9}",
+      "Color": "16"
+     },
+     {
+      "Id": "1406467327",
+      "Name": "PuppetBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SfxBus\\PuppetBus",
+      "GUID": "{0C548E98-D102-418C-8456-F1B6C0DB13FC}",
+      "Color": "13"
+     },
+     {
+      "Id": "2045367873",
+      "Name": "VoiceBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus",
+      "GUID": "{885A9AFA-38F3-428E-9F93-414DA2023D0C}",
+      "Color": "26",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "193924255"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2112977367",
+      "Name": "MovableObjectsBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SfxBus\\MovableObjectsBus",
+      "GUID": "{14655D3F-C790-42EC-9B70-6531E995B34A}",
+      "Color": "6"
+     },
+     {
+      "Id": "2401090920",
+      "Name": "UI_MenusBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\UIBus\\UI_MenusBus",
+      "GUID": "{C3D61355-00D3-4E6F-B379-D338E09B589F}",
+      "Color": "16"
+     },
+     {
+      "Id": "2886307548",
+      "Name": "MusicBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicBus",
+      "GUID": "{BD99B950-434B-4A6C-ABFA-A11374C2A0BE}",
+      "Color": "14"
+     },
+     {
+      "Id": "2894416467",
+      "Name": "AmbBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\AmbBus",
+      "GUID": "{1808A7C8-6E5F-4188-ADEF-CF7E64F64B42}",
+      "Color": "8"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "Color": "10"
+     },
+     {
+      "Id": "3803850708",
+      "Name": "SfxBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SfxBus",
+      "GUID": "{2A04E057-5A03-4B6D-A72F-4641264E8BCB}",
+      "Color": "24"
+     }
+    ],
+    "AuxBusses": [
+     {
+      "Id": "92103823",
+      "Name": "EnormousRVB",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB\\EnormousRVB",
+      "GUID": "{B7AF91ED-C0D1-4CEB-81D1-F9FEACB72FE8}",
+      "Color": "4",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3216246379"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3633416828",
+      "Name": "Hall",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB\\Hall",
+      "GUID": "{168AA74E-F128-4A65-AB94-C40BE7738E4E}",
+      "Color": "4",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3442768367"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "4103918620",
+      "Name": "Small_Room",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB\\Small_Room",
+      "GUID": "{3A2688FC-120B-4FC1-BA08-0148C3383F97}",
+      "Color": "4",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2891462749"
+        }
+       ]
+      }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3130544216",
+      "Name": "Book_Panning",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Book_Panning",
+      "GUID": "{BD7CCCD1-A90D-4FE4-BED2-E954A90AD3DF}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1295475536",
+      "Name": "PlayerCycle",
+      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle",
+      "GUID": "{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}",
+      "Switches": [
+       {
+        "Id": "712161704",
+        "Name": "Run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Run",
+        "GUID": "{A4B19789-DA24-4379-9C2E-5965847713DA}"
+       },
+       {
+        "Id": "1874288895",
+        "Name": "Idle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Idle",
+        "GUID": "{B2894C90-A958-484D-AACB-622E4E741BC4}"
+       },
+       {
+        "Id": "2108779966",
+        "Name": "Walk",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Walk",
+        "GUID": "{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"
+       }
+      ]
+     },
+     {
+      "Id": "3865314626",
+      "Name": "Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
+      "GUID": "{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}",
+      "Switches": [
+       {
+        "Id": "787898836",
+        "Name": "Snow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Snow",
+        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"
+       },
+       {
+        "Id": "2144363834",
+        "Name": "Rock",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Rock",
+        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"
+       },
+       {
+        "Id": "2934663280",
+        "Name": "Organic",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Organic",
+        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0D97255E-2E90-8224-1CBA-D0E50A4BD9F8}"
+ }
+}

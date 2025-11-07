@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using AK.Wwise;
 namespace StarterAssets
 {
     [RequireComponent(typeof(CharacterController))]
@@ -44,7 +44,8 @@ namespace StarterAssets
         [Header("Audio")]
         [SerializeField] private AudioClip landingAudioClip;
         [SerializeField] private AudioClip[] footstepAudioClips;
-        [Range(0f,1f)] [SerializeField] private float footstepAudioVolume = 0.5f;
+        [Range(0f, 1f)][SerializeField] private float footstepAudioVolume = 0.5f;
+        public AK.Wwise.Event footstepEvent;
 
         private CharacterController _controller;
         private Animator _animator;
@@ -197,7 +198,8 @@ namespace StarterAssets
             if (animationEvent.animatorClipInfo.weight > 0.5f && footstepAudioClips.Length > 0)
             {
                 int index = UnityEngine.Random.Range(0, footstepAudioClips.Length);
-                AudioSource.PlayClipAtPoint(footstepAudioClips[index], transform.position, footstepAudioVolume);
+                footstepEvent.Post(gameObject);
+                //AudioSource.PlayClipAtPoint(footstepAudioClips[index], transform.position, footstepAudioVolume);
             }
         }
 
@@ -205,7 +207,7 @@ namespace StarterAssets
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
-                AudioSource.PlayClipAtPoint(landingAudioClip, transform.position, footstepAudioVolume);
+                //AudioSource.PlayClipAtPoint(landingAudioClip, transform.position, footstepAudioVolume);
             }
         }
 

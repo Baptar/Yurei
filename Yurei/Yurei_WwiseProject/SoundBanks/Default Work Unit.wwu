@@ -6,6 +6,7 @@
 				<SoundBank Name="SoundBank_Proto" ID="{C38E3004-4591-4E38-8434-CF3D4F2F1E9B}">
 					<ObjectInclusionList>
 						<ObjectRef Name="WU_Player" ID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" WorkUnitID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Propeller_Loop" ID="{B24BB8D8-CCEC-428C-95FE-946AB4735864}" WorkUnitID="{13F6C7FA-CA7D-4C1C-85E5-92DBC0F94607}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="WU_Ambience" ID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}" WorkUnitID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

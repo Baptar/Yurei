@@ -3,9 +3,39 @@
 	<Events>
 		<WorkUnit Name="WU_Pads" ID="{5FF2BC14-1C95-4F12-B9CE-D3E443DD93E2}" OwnerID="{940ECEBB-A276-41C8-A64C-5BF8D2B89019}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="Play_Forest_Amb" ID="{98F61612-660A-47DE-B91A-19DAA59567E8}"/>
-				<Event Name="Play_Industrial_Amb" ID="{6BD70AFE-1F01-4A1F-9E57-534C1E96B496}"/>
-				<Event Name="Play_Mountain_Amb" ID="{696CBCE7-6CDC-44CB-9EAB-9B021D4CC088}"/>
+				<Event Name="Play_Forest_Amb" ID="{98F61612-660A-47DE-B91A-19DAA59567E8}">
+					<ChildrenList>
+						<Action Name="" ID="{B2FF42A8-4A88-41AE-99E6-8BF7C5093AB7}" ShortID="113459312">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forest_Amb" ID="{C2F9EC95-7195-449A-A5E9-F6022F0B1D5B}" WorkUnitID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Industrial_Amb" ID="{6BD70AFE-1F01-4A1F-9E57-534C1E96B496}">
+					<ChildrenList>
+						<Action Name="" ID="{70C3E13D-9384-4B02-8FDE-C77ED8AF784E}" ShortID="529062376">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Industrial_Amb" ID="{52960CB9-BB61-498B-A605-AA97D22447CC}" WorkUnitID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Mountain_Amb" ID="{696CBCE7-6CDC-44CB-9EAB-9B021D4CC088}">
+					<ChildrenList>
+						<Action Name="" ID="{97E8FF15-DDC9-4984-A754-15210CC892AD}" ShortID="326807016">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mountain_Amb" ID="{0C07D63B-DEE1-4800-9662-51F6A532A353}" WorkUnitID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

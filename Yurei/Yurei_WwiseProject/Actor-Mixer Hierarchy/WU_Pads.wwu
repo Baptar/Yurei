@@ -5,11 +5,16 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="Industrial_Amb" ID="{52960CB9-BB61-498B-A605-AA97D22447CC}" ShortID="759326192">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.1"/>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
 						</Reference>
@@ -17,14 +22,50 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ambience, Industrial, Factory, Machinery, Production, Hum, Machines, Work, Mechanical 02 SND133811 4" ID="{CE6E1991-902D-47FA-84E4-CFE1EDD276CF}" ShortID="361011124">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience, Industrial, Factory, Machinery, Production, Hum, Machines, Work, Mechanical 02 SND133811 4" ID="{C699FBF6-AFE6-43EB-87CD-0F0DF6F1CAF5}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience, Industrial, Factory, Machinery, Production, Hum, Machines, Work, Mechanical 02 SND133811 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="930972377"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience, Industrial, Factory, Machinery, Production, Hum, Machines, Work, Mechanical 02 SND133811 4" ID="{C699FBF6-AFE6-43EB-87CD-0F0DF6F1CAF5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Ambience, Industrial, Factory, Machinery, Production, Hum, Machines, Work, Mechanical 02 SND133811 4" ID="{CE6E1991-902D-47FA-84E4-CFE1EDD276CF}" WorkUnitID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Mountain_Amb" ID="{0C07D63B-DEE1-4800-9662-51F6A532A353}" ShortID="367866282">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.1"/>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
 						</Reference>
@@ -32,14 +73,50 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ambience, Birdsong, Birds, Ravens, After Snow, Himalaya SND102823" ID="{D5D67B96-BF1F-4FDF-8648-8B0921F3E5D2}" ShortID="385705904">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience, Birdsong, Birds, Ravens, After Snow, Himalaya SND102823" ID="{7FD6F481-6FFB-4E5F-997E-2A0613823194}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience, Birdsong, Birds, Ravens, After Snow, Himalaya SND102823.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="787388694"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience, Birdsong, Birds, Ravens, After Snow, Himalaya SND102823" ID="{7FD6F481-6FFB-4E5F-997E-2A0613823194}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Ambience, Birdsong, Birds, Ravens, After Snow, Himalaya SND102823" ID="{D5D67B96-BF1F-4FDF-8648-8B0921F3E5D2}" WorkUnitID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Forest_Amb" ID="{C2F9EC95-7195-449A-A5E9-F6022F0B1D5B}" ShortID="783745372">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.1"/>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
 						</Reference>
@@ -47,6 +124,37 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ambience, Forest, Forest, Quiet, Flies Flying, Birds Chirping Distant, Light Wind, Forest Transients, Croatia SND70207 1" ID="{ECA3F533-55CF-40DF-BB56-F715F5E61925}" ShortID="504517057">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience, Forest, Forest, Quiet, Flies Flying, Birds Chirping Distant, Light Wind, Forest Transients, Croatia SND70207 1" ID="{4874A153-BC65-4069-A3F3-9C120CBB0831}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience, Forest, Forest, Quiet, Flies Flying, Birds Chirping Distant, Light Wind, Forest Transients, Croatia SND70207 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="727097187"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience, Forest, Forest, Quiet, Flies Flying, Birds Chirping Distant, Light Wind, Forest Transients, Croatia SND70207 1" ID="{4874A153-BC65-4069-A3F3-9C120CBB0831}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Ambience, Forest, Forest, Quiet, Flies Flying, Birds Chirping Distant, Light Wind, Forest Transients, Croatia SND70207 1" ID="{ECA3F533-55CF-40DF-BB56-F715F5E61925}" WorkUnitID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>

@@ -1,3 +1,15 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1295475536	PlayerCycle			\Default Work Unit\PlayerCycle	
+	3865314626	Material			\Default Work Unit\Material	
+
+Switch	ID	Name	Switch Group			Notes
+	712161704	Run	PlayerCycle			
+	1874288895	Idle	PlayerCycle			
+	2108779966	Walk	PlayerCycle			
+	787898836	Snow	Material			
+	2144363834	Rock	Material			
+	2934663280	Organic	Material			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	590867056	JingleBus			\Default Work Unit\Master Audio Bus\MusicBus\JingleBus	
 	695384145	RVB			\Default Work Unit\Master Audio Bus\RVB	
@@ -23,4 +35,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
 	3442768367	Hall_Large_Dark	Wwise RoomVerb			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	188490397	Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\89\{891F5851-2F95-FBCB-FEF9-2F114D5A4486}.wem		\Actor-Mixer Hierarchy\WU_Ambience\WU_Ponctual_Objects\Propeller_Loop\Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013		2589216
 

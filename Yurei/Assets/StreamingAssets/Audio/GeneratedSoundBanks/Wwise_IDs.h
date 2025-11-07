@@ -11,6 +11,17 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
+        static const AkUniqueID PLAY_FOOTSTEP_BASIC = 1897435707U;
+        static const AkUniqueID PLAY_FOREST_AMB = 4156323864U;
+        static const AkUniqueID PLAY_INDUSTRIAL_AMB = 2120142010U;
+        static const AkUniqueID PLAY_MOUNTAIN_AMB = 4031737482U;
+        static const AkUniqueID PLAY_MUSICBOX_LOOP = 3355550791U;
+        static const AkUniqueID PLAY_PROPELLER_LOOP = 75416360U;
+    } // namespace EVENTS
+
     namespace SWITCHES
     {
         namespace MATERIAL
@@ -38,6 +49,11 @@ namespace AK
         } // namespace PLAYERCYCLE
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID BOOK_PANNING = 3130544216U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

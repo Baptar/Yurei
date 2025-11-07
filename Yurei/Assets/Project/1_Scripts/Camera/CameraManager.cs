@@ -18,16 +18,21 @@ public class CameraManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public void Start(){
+        
+    WwiseListenerManager.Instance?.InitializeListener(CurrentCamera);
+    }
+
     public void SwitchTo(Camera newCam, bool followPlayer = false, Vector3 zonePosition = default(Vector3), Ease easeFunction = Ease.InOutExpo, float easeDuration = 0.5f)
     {
         SetNewCameraInputRef(newCam);
-        
+        WwiseListenerManager.Instance?.SwitchListenerTo(newCam);
         if (followPlayer)
         {
             mainCamera.transform.DOLocalMove(zonePosition, easeDuration).SetEase(easeFunction);            
         }
     }
-
+    
     public void SetNewCameraInputRef(Camera newCam)
     {
         if (newCam == CurrentCamera) return;

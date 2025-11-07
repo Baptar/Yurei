@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{303069DB-E921-4481-ADA0-513F0C4FBF9F}" SchemaVersion="123">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{303069DB-E921-4481-ADA0-513F0C4FBF9F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{303069DB-E921-4481-ADA0-513F0C4FBF9F}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Book_Panning" ID="{BD7CCCD1-A90D-4FE4-BED2-E954A90AD3DF}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-100"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

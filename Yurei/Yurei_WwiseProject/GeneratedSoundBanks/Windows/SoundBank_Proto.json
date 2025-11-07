@@ -10,10 +10,20 @@
     "Type": "User",
     "GUID": "{C38E3004-4591-4E38-8434-CF3D4F2F1E9B}",
     "Language": "SFX",
-    "Hash": "{2CF235F8-1E3B-49B8-6103-A4C68352784A}",
+    "Hash": "{FCA924E0-D340-6748-5895-CE68496F2F56}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBank_Proto",
     "ShortName": "SoundBank_Proto",
     "Path": "SoundBank_Proto.bnk",
+    "Media": [
+     {
+      "Id": "188490397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013.wav",
+      "CachePath": "89/{891F5851-2F95-FBCB-FEF9-2F114D5A4486}.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
       {
@@ -218,9 +228,63 @@
        ]
       }
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1295475536",
+      "Name": "PlayerCycle",
+      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle",
+      "GUID": "{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}",
+      "Switches": [
+       {
+        "Id": "712161704",
+        "Name": "Run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Run",
+        "GUID": "{A4B19789-DA24-4379-9C2E-5965847713DA}"
+       },
+       {
+        "Id": "1874288895",
+        "Name": "Idle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Idle",
+        "GUID": "{B2894C90-A958-484D-AACB-622E4E741BC4}"
+       },
+       {
+        "Id": "2108779966",
+        "Name": "Walk",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Walk",
+        "GUID": "{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"
+       }
+      ]
+     },
+     {
+      "Id": "3865314626",
+      "Name": "Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
+      "GUID": "{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}",
+      "Switches": [
+       {
+        "Id": "787898836",
+        "Name": "Snow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Snow",
+        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"
+       },
+       {
+        "Id": "2144363834",
+        "Name": "Rock",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Rock",
+        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"
+       },
+       {
+        "Id": "2934663280",
+        "Name": "Organic",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Organic",
+        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{B683C8CB-C71A-2445-2048-B7E4F5B33AC9}"
+  "FileHash": "{D2623AEB-5769-80B2-245A-621810C56A2D}"
  }
 }

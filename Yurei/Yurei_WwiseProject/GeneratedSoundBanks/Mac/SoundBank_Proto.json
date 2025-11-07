@@ -10,10 +10,20 @@
     "Type": "User",
     "GUID": "{C38E3004-4591-4E38-8434-CF3D4F2F1E9B}",
     "Language": "SFX",
-    "Hash": "{6E084049-EC6D-FCF1-8874-F7E35E22ACF9}",
+    "Hash": "{FCA924E0-D340-6748-5895-CE68496F2F56}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBank_Proto",
     "ShortName": "SoundBank_Proto",
     "Path": "SoundBank_Proto.bnk",
+    "Media": [
+     {
+      "Id": "188490397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013.wav",
+      "CachePath": "89/{891F5851-2F95-FBCB-FEF9-2F114D5A4486}.wem"
+     }
+    ],
     "Plugins": {
      "Custom": [
       {
@@ -275,6 +285,6 @@
     ]
    }
   ],
-  "FileHash": "{CF78B9A0-B389-B0B6-4737-93D364C1A267}"
+  "FileHash": "{96BE7FAA-2EC8-339B-A8CE-81E5EE4AC6D6}"
  }
 }
