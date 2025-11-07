@@ -2325,7 +2325,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "color?",
+    "m_Name": "ShowColor",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -6821,7 +6821,7 @@
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "86936764017a410685477385a16ba57c",
     "m_Id": 0,
-    "m_DisplayName": "Out",
+    "m_DisplayName": "ShowColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -7804,7 +7804,7 @@
     "m_Title": "attenuation",
     "m_Position": {
         "x": -2225.0,
-        "y": 307.0001220703125
+        "y": 307.0
     }
 }
 
@@ -8050,7 +8050,7 @@
     "m_Title": "NdotL",
     "m_Position": {
         "x": -1907.0,
-        "y": -188.00003051757813
+        "y": -188.0
     }
 }
 
@@ -8222,10 +8222,10 @@
     "m_Guid": {
         "m_GuidSerialized": "1020b18c-d5a4-4257-b8b1-a09f2fc71afd"
     },
-    "m_Name": "color?",
+    "m_Name": "ShowColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "color?",
-    "m_DefaultReferenceName": "_COLOR",
+    "m_RefNameGeneratedByDisplayName": "ShowColor",
+    "m_DefaultReferenceName": "_SHOWCOLOR",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
