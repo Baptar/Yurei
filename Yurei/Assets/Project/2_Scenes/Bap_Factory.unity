@@ -2749,31 +2749,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc57c261b2a93141a4d1b2bede05fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doublePageMaterialDatas:
-  - rightPagesMaterial: {fileID: 2100000, guid: ab8173b88a2118e428c6e36e9f0da605, type: 2}
-    leftPagesMaterial: {fileID: 0}
-    isAccessible: 1
-  - rightPagesMaterial: {fileID: 2100000, guid: 127ba703dca934147b6cf02684f61d5d, type: 2}
-    leftPagesMaterial: {fileID: 2100000, guid: d485a34411ecd2349bbe7286e4b4e7dc, type: 2}
-    isAccessible: 1
-  - rightPagesMaterial: {fileID: 8487583350030259624, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
-    leftPagesMaterial: {fileID: 4874126678125670354, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
-    isAccessible: 1
-  - rightPagesMaterial: {fileID: 0}
-    leftPagesMaterial: {fileID: -5437306919706194135, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
-    isAccessible: 1
+  progMode: 0
   emptyPageMaterial: {fileID: 2100000, guid: 1377f8e5f2830bd4b819f7851541af4c, type: 2}
   pagePrefab: {fileID: 7647141888527236377, guid: 736f7138d80c45547835fbd3373fcbdb, type: 3}
   pageSpawnPoint: {fileID: 450058045}
   lookBookTransform: {fileID: 273773366}
   bookBase: {fileID: 1211015827}
+  numberTurningPageToLeft: 0
+  numberTurningPageToRight: 0
   currentRightPageNumber: 0
   currentLeftPageNumber: 1
   pageCount: 0
-  numberTurningPageToLeft: 0
-  numberTurningPageToRight: 0
   isLookingBook: 0
   isCameraMoving: 0
+  doublePageMaterialDatas:
+  - leftPagesMaterial: {fileID: 0}
+    rightPagesMaterial: {fileID: 2100000, guid: ab8173b88a2118e428c6e36e9f0da605, type: 2}
+    isAccessible: 1
+  - leftPagesMaterial: {fileID: 2100000, guid: d485a34411ecd2349bbe7286e4b4e7dc, type: 2}
+    rightPagesMaterial: {fileID: 2100000, guid: 127ba703dca934147b6cf02684f61d5d, type: 2}
+    isAccessible: 1
+  - leftPagesMaterial: {fileID: 4874126678125670354, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
+    rightPagesMaterial: {fileID: 8487583350030259624, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
+    isAccessible: 1
+  - leftPagesMaterial: {fileID: -5437306919706194135, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
+    rightPagesMaterial: {fileID: 0}
+    isAccessible: 1
 --- !u!4 &354895383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 435596, guid: 6a53f0c8427bc2d49b828aa97154ab08, type: 3}
@@ -2970,7 +2971,7 @@ PrefabInstance:
     - target: {fileID: 1683234356460313809, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: ab8173b88a2118e428c6e36e9f0da605, type: 2}
+      objectReference: {fileID: 2100000, guid: 127ba703dca934147b6cf02684f61d5d, type: 2}
     - target: {fileID: 4631718200457653661, guid: 5ebc3a6007fdcea4ca07770db030aea7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4674,50 +4675,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 484792, guid: aa36899a7c912734f9c08658de8b1d48, type: 3}
   m_PrefabInstance: {fileID: 592243250}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &595737737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 595737738}
-  - component: {fileID: 595737739}
-  m_Layer: 0
-  m_Name: LightZoneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &595737738
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595737737}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1889162521}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &595737739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595737737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86077b5f5e18ba349bf72fbd6c8c8a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &597314517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6095,6 +6052,10 @@ MonoBehaviour:
     drawOutline: 1
     outlineThickness: 20
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
+    tl: 0
+    tr: 0
+    tt: 0
+    tb: 0
   - name: 
     texture: {fileID: 8400000, guid: f31df827a63687843baac7c5cc54af71, type: 2}
     x: 0.07
@@ -6105,6 +6066,10 @@ MonoBehaviour:
     drawOutline: 1
     outlineThickness: 17.7
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
+    tl: 0
+    tr: 0
+    tt: 0
+    tb: 0
   - name: 
     texture: {fileID: 8400000, guid: 9ca49d238faab614d9f4aa1ff1d8fdb7, type: 2}
     x: 0.42
@@ -6115,6 +6080,10 @@ MonoBehaviour:
     drawOutline: 1
     outlineThickness: 17.7
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
+    tl: 0
+    tr: 0
+    tt: 0
+    tb: 0
   - name: 
     texture: {fileID: 8400000, guid: 1de084282cb259348be8133221a2532e, type: 2}
     x: 0.07
@@ -6125,8 +6094,12 @@ MonoBehaviour:
     drawOutline: 1
     outlineThickness: 17.7
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  update: 1
-  blitMaterial: {fileID: 1926393962}
+    tl: 0
+    tr: 0
+    tt: 0
+    tb: 0
+  autoUpdate: 1
+  enableCulling: 1
 --- !u!1001 &755835933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8934,11 +8907,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a67880cc1239b043b40caf78890610f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _input: {fileID: 1070666548}
   moveSpeed: 1.6
   sprintSpeed: 5.335
   rotationSmoothTime: 0.219
   speedChangeRate: 10
+  progMode: 0
+  _input: {fileID: 1070666548}
   gravity: -15
   Grounded: 1
   GroundedOffset: -0.14
@@ -8949,7 +8923,7 @@ MonoBehaviour:
   isGrabbingElement: 0
   holdPoint: {fileID: 0}
   canInteract: 1
-  CameraDirSmooth: 1.5
+  cameraDirSmooth: 1.5
   landingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
   footstepAudioClips:
   - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
@@ -11617,8 +11591,12 @@ MonoBehaviour:
     drawOutline: 1
     outlineThickness: 17.7
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  update: 1
-  blitMaterial: {fileID: 1926393962}
+    tl: 0
+    tr: 0
+    tt: 0
+    tb: 0
+  autoUpdate: 1
+  enableCulling: 1
 --- !u!4 &1423279055
 Transform:
   m_ObjectHideFlags: 0
@@ -13384,8 +13362,12 @@ MonoBehaviour:
     drawOutline: 1
     outlineThickness: 17.7
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  update: 1
-  blitMaterial: {fileID: 1926393962}
+    tl: 0
+    tr: 0
+    tt: 0
+    tb: 0
+  autoUpdate: 1
+  enableCulling: 1
 --- !u!1001 &1676232645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15073,7 +15055,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1048670875}
-  - {fileID: 595737738}
   - {fileID: 348396782}
   - {fileID: 616310030}
   m_Father: {fileID: 0}
@@ -15386,39 +15367,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 499098, guid: 93b7d0ada2e6c2849be407103254d1fe, type: 3}
   m_PrefabInstance: {fileID: 1924374095}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1926393962
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlitAdd
-  m_Shader: {fileID: 4800000, guid: 6a76ea6329fb7384fb5d2c2e9225af9e, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _Alpha: 1
-    m_Colors: []
-  m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1001 &1927428548
 PrefabInstance:
   m_ObjectHideFlags: 0

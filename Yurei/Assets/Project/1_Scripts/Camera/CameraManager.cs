@@ -1,11 +1,13 @@
 using System;
 using DG.Tweening;
+using EditorAttributes;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class CameraManager : MonoBehaviour
 {
     public static CameraManager Instance;
+    [GUIColor(GUIColor.Red)]
     public GameObject mainCamera;
     public Camera CurrentCamera { get; private set; }
     public Camera PreviousCamera { get; private set; }

@@ -1,5 +1,8 @@
 using UnityEngine;
 using AK.Wwise;
+using EditorAttributes;
+using UnityEngine.Serialization;
+
 namespace StarterAssets
 {
     [RequireComponent(typeof(CharacterController))]
@@ -7,46 +10,60 @@ namespace StarterAssets
     [RequireComponent(typeof(BoxCollider))]
     public class ThirdPersonController : MonoBehaviour
     {
-        [Header("References")]
-        [SerializeField] private PlayerInputController _input;
-
-        [Space(10)]
         [Header("Movement Settings")]
+        [GUIColor(GUIColor.Cyan)]
         [SerializeField] private float moveSpeed = 2f;
         [SerializeField] private float sprintSpeed = 5.335f;
         [Range(0f, 0.3f)] [SerializeField] private float rotationSmoothTime = 0.12f;
         [SerializeField] private float speedChangeRate = 10f;
+        
+        [Space(10)]
+        [GUIColor(GUIColor.Magenta)]
+        [SerializeField] private bool progMode;
+        
+        [Space(10)]
+        [Header("References")]
+        [GUIColor(GUIColor.Red)]
+        [EnableField(nameof(progMode))] [SerializeField] private PlayerInputController _input;
 
         [Space(10)]
         [Header("Gravity Settings")]
-        [SerializeField] private float gravity = -15f;
-        private float _verticalVelocity;
-        private float _terminalVelocity = 53f;
+        [GUIColor(GUIColor.Red)]
+        [EnableField(nameof(progMode))] [SerializeField] private float gravity = -15f;
+        [EnableField(nameof(progMode))] private float _verticalVelocity;
+        [EnableField(nameof(progMode))] private float _terminalVelocity = 53f;
 
         [Space(10)]
         [Header("Ground Settings")]
-        public bool Grounded;
-        public float GroundedOffset = -0.14f;
-        public float GroundedRadius = 0.28f;
-        public LayerMask GroundLayers;
+        [GUIColor(GUIColor.Red)]
+        [EnableField(nameof(progMode))] public bool Grounded;
+        [EnableField(nameof(progMode))] public float GroundedOffset = -0.14f;
+        [EnableField(nameof(progMode))] public float GroundedRadius = 0.28f;
+        [EnableField(nameof(progMode))] public LayerMask GroundLayers;
 
         [Space(10)]
         [Header("Interaction")]
-        public bool isGrabbingElement = false;
-        public Transform holdPoint;
-        public bool canInteract = true;
+        [GUIColor(GUIColor.Red)]
+        [EnableField(nameof(progMode))] public bool isGrabbingElement = false;
+        [EnableField(nameof(progMode))] public Transform holdPoint;
+        [EnableField(nameof(progMode))] public bool canInteract = true;
         
         [Space(10)]
         [Header("Camera Settings")]
-        public float CameraDirSmooth = 5f;
+        [GUIColor(GUIColor.Red)]
+        [EnableField(nameof(progMode))] public float cameraDirSmooth = 1.5f;
 
         [Space(10)]
         [Header("Audio")]
+        [GUIColor(GUIColor.Orange)]
         [SerializeField] private AudioClip landingAudioClip;
         [SerializeField] private AudioClip[] footstepAudioClips;
         [Range(0f, 1f)][SerializeField] private float footstepAudioVolume = 0.5f;
         public AK.Wwise.Event footstepEvent;
-
+        
+        /// <summary>
+        /// private variables
+        /// </summary>
         private CharacterController _controller;
         private Animator _animator;
         private GameObject _mainCamera;
@@ -66,7 +83,7 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
         
-        public IInteractable _currentInteractable;
+        private IInteractable _currentInteractable;
 
         private void Start()
         {
@@ -163,8 +180,8 @@ namespace StarterAssets
 
             if (moveInput.sqrMagnitude > 0.001f)
             {
-                _smoothedForward = Vector3.Slerp(_smoothedForward, camForward, Time.deltaTime * CameraDirSmooth);
-                _smoothedRight = Vector3.Slerp(_smoothedRight, camRight, Time.deltaTime * CameraDirSmooth);
+                _smoothedForward = Vector3.Slerp(_smoothedForward, camForward, Time.deltaTime * cameraDirSmooth);
+                _smoothedRight = Vector3.Slerp(_smoothedRight, camRight, Time.deltaTime * cameraDirSmooth);
             }
             else
             {
@@ -223,6 +240,7 @@ namespace StarterAssets
             if (!CanInteract() || _currentInteractable == null) return;
             
             _currentInteractable.Interact(this);
+            _currentInteractable = null;
         }
         
         private void OnTriggerEnter(Collider other)

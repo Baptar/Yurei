@@ -1,43 +1,56 @@
 using System;
 using DG.Tweening;
+using EditorAttributes;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+
 
 public class BookManager : MonoBehaviour
 {
     public static BookManager Instance;
  
-    [System.Serializable]
-    public class DoublePageMaterialData
+    [Serializable]
+    public struct DoublePageMaterialData
     {
-        public Material rightPagesMaterial;
         public Material leftPagesMaterial;
-        public bool isAccessible = true;
+        public Material rightPagesMaterial;
+        public bool isAccessible;
     }
+    
+    [GUIColor(GUIColor.Magenta)]
+    [SerializeField] private bool progMode;
+
+    [Space(5)]
+    [GUIColor(GUIColor.Red)]
+    [Header("Book")]
+    [EnableField(nameof(progMode))] [SerializeField] private Material emptyPageMaterial;
+    [EnableField(nameof(progMode))] [SerializeField] private GameObject pagePrefab;
+    [EnableField(nameof(progMode))] [SerializeField] private Transform pageSpawnPoint;
+    [EnableField(nameof(progMode))] [SerializeField] private Transform lookBookTransform;
+    [EnableField(nameof(progMode))] [SerializeField] private SkinnedMeshRenderer bookBase;
+    
+    [Space(5)]
+    [Header("DEBUG")]
+    [GUIColor(GUIColor.Orange)]
+    [EnableField(nameof(progMode))] public int numberTurningPageToLeft;
+    [EnableField(nameof(progMode))] public int numberTurningPageToRight;
+    [EnableField(nameof(progMode))] [SerializeField] private int currentRightPageNumber = 0;
+    [EnableField(nameof(progMode))] [SerializeField] private int currentLeftPageNumber = 1;
+    [EnableField(nameof(progMode))] [SerializeField] private int pageCount;
+    [EnableField(nameof(progMode))] [SerializeField] private bool isLookingBook;
+    [EnableField(nameof(progMode))] [SerializeField] private bool isCameraMoving;
     
     [Space(5)]
     [Header("Pages Materials")]
     [Tooltip("this is an array of pages : a page is defined by its right and left material")]
-    [SerializeField] private DoublePageMaterialData[] doublePageMaterialDatas;
-    [SerializeField] private Material emptyPageMaterial;
+    [GUIColor(GUIColor.Cyan)]
+    [SerializeField, DataTable(true)] 
+    private DoublePageMaterialData[] doublePageMaterialDatas;
+
     
-    [Space(5)]
-    [Header("Book")]
-    [SerializeField] private GameObject pagePrefab;
-    [SerializeField] private Transform pageSpawnPoint;
-    [SerializeField] private Transform lookBookTransform;
-    [SerializeField] private SkinnedMeshRenderer bookBase;
-    
-    [Space(5)]
-    [Header("DEBUG")]
-    public int currentRightPageNumber = 0;
-    public int currentLeftPageNumber = 1;
-    public int pageCount;
-    public int numberTurningPageToLeft;
-    public int numberTurningPageToRight;
-    public bool isLookingBook;
-    public bool isCameraMoving;
+
+   
     
     
     private Vector3 lastCameraPosition;
