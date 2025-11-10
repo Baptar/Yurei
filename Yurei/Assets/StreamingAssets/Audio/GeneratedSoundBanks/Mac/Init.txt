@@ -18,7 +18,6 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	101835093	Guitar Distortion (Custom)	Wwise Guitar Distortion			
-	193924255	Meter (Custom)	Wwise Meter			
 	1416967478	All_Buttons_IN	Wwise Compressor			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 	3216246379	Space_Dreaming	Wwise RoomVerb			

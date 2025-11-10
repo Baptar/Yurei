@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D7FC647C-6B9E-A875-0480-E73D65D7931D}",
+    "Hash": "{A6BF02AC-9396-5424-608F-AFD9CCD310EB}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -23,14 +23,6 @@
        "GUID": "{C9203F2A-6B37-497F-87FD-3A537CA8E21D}",
        "LibName": "Wwise Guitar Distortion",
        "LibId": "8257539"
-      },
-      {
-       "Id": "193924255",
-       "Name": "Meter (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
-       "GUID": "{74A3E342-8E44-45FC-AC1A-47EB0383121D}",
-       "LibName": "Wwise Meter",
-       "LibId": "8454147"
       }
      ],
      "ShareSets": [
@@ -141,14 +133,7 @@
       "Name": "VoiceBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus",
       "GUID": "{885A9AFA-38F3-428E-9F93-414DA2023D0C}",
-      "Color": "26",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "193924255"
-        }
-       ]
-      }
+      "Color": "26"
      },
      {
       "Id": "2112977367",
@@ -301,6 +286,6 @@
     ]
    }
   ],
-  "FileHash": "{D1202224-B590-19BF-15E8-CEDB69418AE2}"
+  "FileHash": "{109A5C96-1BFB-34C9-3C55-5EB2F3ECB7AC}"
  }
 }

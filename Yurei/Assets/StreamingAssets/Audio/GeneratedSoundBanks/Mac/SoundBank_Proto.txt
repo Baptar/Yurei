@@ -19,6 +19,9 @@ Switch	ID	Name	Switch Group			Notes
 	2144363834	Rock	Material			
 	2934663280	Organic	Material			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3130544216	Book_Panning			\Default Work Unit\Book_Panning	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	590867056	JingleBus			\Default Work Unit\Master Audio Bus\MusicBus\JingleBus	
 	695384145	RVB			\Default Work Unit\Master Audio Bus\RVB	
@@ -39,7 +42,6 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	101835093	Guitar Distortion (Custom)	Wwise Guitar Distortion			
-	193924255	Meter (Custom)	Wwise Meter			
 	1416967478	All_Buttons_IN	Wwise Compressor			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
@@ -48,6 +50,7 @@ Effect plug-ins	ID	Name	Type				Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	65014202	Footsteps, Human, Asphalt, Male, Walk SND11513 S09	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\C3\{C35733D1-6CBC-9C2B-764A-661CDC133111}.wem		\Actor-Mixer Hierarchy\WU_Player\Player_Footsteps\Walk\Rock_Walk\Footsteps, Human, Asphalt, Male, Walk SND11513 S09		46948
 	150338941	Footsteps, Human, Asphalt, Male, Walk SND11513 S00 1	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\EE\{EEAC3DF9-06BD-FE06-4777-0C0F25CC4D38}.wem		\Actor-Mixer Hierarchy\WU_Player\Player_Footsteps\Walk\Rock_Walk\Footsteps, Human, Asphalt, Male, Walk SND11513 S00 1		54122
+	188490397	Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\89\{891F5851-2F95-FBCB-FEF9-2F114D5A4486}.wem		\Actor-Mixer Hierarchy\WU_Ambience\WU_Ponctual_Objects\Propeller_Loop\Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013		2589216
 	221451855	Footsteps, Human, Asphalt, Male, Walk SND11513 S05	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\30\{30481FB8-80CA-9852-AFE8-6ABB2CE5CA4B}.wem		\Actor-Mixer Hierarchy\WU_Player\Player_Footsteps\Walk\Rock_Walk\Footsteps, Human, Asphalt, Male, Walk SND11513 S05		53166
 	298637435	Footsteps, Human, Asphalt, Male, Walk SND11513 S02 1	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\7F\{7F31200C-C498-4C40-B781-F08F9914EE9A}.wem		\Actor-Mixer Hierarchy\WU_Player\Player_Footsteps\Walk\Rock_Walk\Footsteps, Human, Asphalt, Male, Walk SND11513 S02 1		50408
 	360088399	Footsteps, Human, Asphalt, Male, Walk SND11513 S06	C:\Users\ELE66df04a172365\Documents\GitHub\Yurei\Yurei\Yurei_WwiseProject\.cache\5D\{5D8954FC-54F3-9780-77A8-E68F67880476}.wem		\Actor-Mixer Hierarchy\WU_Player\Player_Footsteps\Walk\Rock_Walk\Footsteps, Human, Asphalt, Male, Walk SND11513 S06		49590

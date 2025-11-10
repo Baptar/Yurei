@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{C38E3004-4591-4E38-8434-CF3D4F2F1E9B}",
     "Language": "SFX",
-    "Hash": "{29511050-6E4C-FFED-0D69-F50A74E74F32}",
+    "Hash": "{A4D39A2A-F25C-327B-883A-90D1105C9CBD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBank_Proto",
     "ShortName": "SoundBank_Proto",
     "Path": "SoundBank_Proto.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps, Human, Asphalt, Male, Walk SND11513 S00 1.wav",
       "CachePath": "EE/{EEAC3DF9-06BD-FE06-4777-0C0F25CC4D38}.wem"
+     },
+     {
+      "Id": "188490397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Designed, Drone, Distant Machine Room, Heavy Electricity, Fan, Rotating, Swirling 02 SND84013.wav",
+      "CachePath": "89/{891F5851-2F95-FBCB-FEF9-2F114D5A4486}.wem"
      },
      {
       "Id": "221451855",
@@ -161,14 +169,6 @@
        "GUID": "{C9203F2A-6B37-497F-87FD-3A537CA8E21D}",
        "LibName": "Wwise Guitar Distortion",
        "LibId": "8257539"
-      },
-      {
-       "Id": "193924255",
-       "Name": "Meter (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
-       "GUID": "{74A3E342-8E44-45FC-AC1A-47EB0383121D}",
-       "LibName": "Wwise Meter",
-       "LibId": "8454147"
       }
      ],
      "ShareSets": [
@@ -213,7 +213,7 @@
       "ObjectPath": "\\Events\\WU_Player\\Play_Footstep",
       "GUID": "{E48D4166-4FBF-4144-86D2-1B4F66AFC9A3}",
       "Color": "18",
-      "MaxAttenuation": "15",
+      "MaxAttenuation": "12",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0.56295836",
@@ -297,7 +297,7 @@
       "ObjectPath": "\\Events\\WU_Player\\Play_Footstep_Basic",
       "GUID": "{D1ADA099-9DB9-49AD-98E4-02BB32F6675D}",
       "Color": "18",
-      "MaxAttenuation": "15",
+      "MaxAttenuation": "12",
       "DurationType": "OneShot",
       "DurationMin": "0.48804167",
       "DurationMax": "0.56295836",
@@ -352,7 +352,7 @@
       "ObjectPath": "\\Events\\WU_Ambience\\WU_Pads\\Play_Forest_Amb",
       "GUID": "{98F61612-660A-47DE-B91A-19DAA59567E8}",
       "Color": "8",
-      "MaxAttenuation": "1.5",
+      "MaxAttenuation": "1.2",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -366,7 +366,7 @@
       "ObjectPath": "\\Events\\WU_Ambience\\WU_Pads\\Play_Industrial_Amb",
       "GUID": "{6BD70AFE-1F01-4A1F-9E57-534C1E96B496}",
       "Color": "8",
-      "MaxAttenuation": "1.5",
+      "MaxAttenuation": "1.2",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -380,7 +380,7 @@
       "ObjectPath": "\\Events\\WU_Ambience\\WU_Pads\\Play_Mountain_Amb",
       "GUID": "{696CBCE7-6CDC-44CB-9EAB-9B021D4CC088}",
       "Color": "8",
-      "MaxAttenuation": "1.5",
+      "MaxAttenuation": "1.2",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -402,10 +402,13 @@
       "ObjectPath": "\\Events\\WU_Ambience\\WU_Ponctual_Objects\\Play_Propeller_Loop",
       "GUID": "{B24BB8D8-CCEC-428C-95FE-946AB4735864}",
       "Color": "8",
-      "MaxAttenuation": "100",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "MaxAttenuation": "50",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "188490397"
+       }
+      ]
      }
     ],
     "Busses": [
@@ -463,14 +466,7 @@
       "Name": "VoiceBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus",
       "GUID": "{885A9AFA-38F3-428E-9F93-414DA2023D0C}",
-      "Color": "26",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "193924255"
-        }
-       ]
-      }
+      "Color": "26"
      },
      {
       "Id": "2112977367",
@@ -559,6 +555,14 @@
       }
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "3130544216",
+      "Name": "Book_Panning",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Book_Panning",
+      "GUID": "{BD7CCCD1-A90D-4FE4-BED2-E954A90AD3DF}"
+     }
+    ],
     "SwitchGroups": [
      {
       "Id": "1295475536",
@@ -615,6 +619,6 @@
     ]
    }
   ],
-  "FileHash": "{6C8F5E8F-D98B-3EE8-EF63-49281D66F9B2}"
+  "FileHash": "{2A6E163D-3F56-55E9-8E4F-32A63921918B}"
  }
 }
