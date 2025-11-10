@@ -1,4 +1,3 @@
-using EditorAttributes;
 using UnityEngine;
 
 [ExecuteAlways]
@@ -8,11 +7,13 @@ public class PageCasePainter : MonoBehaviour
     public class CaseData
     {
         public string name;
-        public Texture texture;
+        public RenderTexture texture;
+        public Camera camera;
         public float x = 0f;       
         public float y = 0f;       
         public float width = 0.3f; 
         public float height = 0.3f;
+        public int maxQualitySize = 1024;
         [Range(0.0f, 1.0f)] public float alpha = 1f;
         
         [Space(10)]
@@ -47,6 +48,8 @@ public class PageCasePainter : MonoBehaviour
     [SerializeField] private bool autoUpdate = true;
     [Tooltip("enable culling for outscreen textures")]
     [SerializeField] private bool enableCulling = true;
+    [Tooltip("enable culling for outscreen textures")]
+    [SerializeField] private bool enableAutoResizeRenderTexture = false;
     
     private Material blitMaterial;
     private bool isDirty = true;
@@ -129,7 +132,9 @@ public class PageCasePainter : MonoBehaviour
             if (c.needsRecalc)
             {
                 CalculateSourceRect(c);
+                if (enableAutoResizeRenderTexture) ResizeRenderTexture(c.texture, c.camera, c.width, c.height, c.maxQualitySize);
                 c.needsRecalc = false;
+                c.maxQualitySize = Mathf.Max(c.texture.width, c.texture.height);
             }
 
             // base position 
@@ -269,5 +274,24 @@ public class PageCasePainter : MonoBehaviour
             lineMat.SetInt("_ZWrite", 0);
         }
         return lineMat;
+    }
+
+    private void ResizeRenderTexture(RenderTexture rt, Camera cam, float width, float height, int maxQualitySize = 1024)
+    {
+        if (cam == null || rt == null || !cam.gameObject.activeInHierarchy) return;
+        
+        rt.Release();
+        
+        float proportionalValue = maxQualitySize /  Mathf.Max(0.01f, Mathf.Max(width, height)); 
+        rt.width = width > height ? maxQualitySize : Mathf.Max((int)(width * proportionalValue), 1);
+        rt.height = height > width ? maxQualitySize : Mathf.Max((int)(height * proportionalValue), 1);
+        
+        cam.ResetAspect();
+        
+        //cam.gameObject.SetActive(false);
+//
+        //await Task.Delay(TimeSpan.FromSeconds(0.1f));
+//
+        //cam.gameObject.SetActive(true);
     }
 }
