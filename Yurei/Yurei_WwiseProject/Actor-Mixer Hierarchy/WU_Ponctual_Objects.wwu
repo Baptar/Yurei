@@ -6,14 +6,9 @@
 				<RandomSequenceContainer Name="Propeller_Loop" ID="{18751B94-33FD-4050-8901-79773A248E7A}" ShortID="412426642">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
-						<Property Name="Inclusion" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>-28</Value>
+								<Value>-5</Value>
 							</ValueList>
 						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -25,7 +20,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Manga_Panning" ID="{0F111D97-2238-451E-8C0F-DED098324284}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+							<ObjectRef Name="Attenuation_30m" ID="{5858F260-76E4-4D09-B3DC-C1E175E02657}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>

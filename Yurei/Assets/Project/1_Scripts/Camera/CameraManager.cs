@@ -23,7 +23,6 @@ public class CameraManager : MonoBehaviour
     public void SwitchTo(Camera newCam, bool followPlayer = false, Vector3 zonePosition = default(Vector3), Ease easeFunction = Ease.InOutExpo, float easeDuration = 0.5f)
     {
         SetNewCameraInputRef(newCam);
-        WwiseListenerManager.Instance?.SwitchListenerTo(newCam);
         if (followPlayer)
         {
             mainCamera.transform.DOLocalMove(zonePosition, easeDuration).SetEase(easeFunction);            
