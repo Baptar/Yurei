@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09962f309f94b814b8c1f1cb6edf5c34, type: 3}
   m_Name: EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB
   m_EditorClassIdentifier: 
-  objectName: Material
-  id: 3865314626
+  objectName: Surface_Material
+  id: 1230601154
   guid: EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB

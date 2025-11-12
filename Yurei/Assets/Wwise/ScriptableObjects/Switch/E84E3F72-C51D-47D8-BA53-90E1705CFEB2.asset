@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Rock
   id: 2144363834
   guid: E84E3F72-C51D-47D8-BA53-90E1705CFEB2
-  WwiseSwitchGroupReference: {fileID: 0}
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 7dbf535d920ea63409b86ab3ea36063f, type: 2}

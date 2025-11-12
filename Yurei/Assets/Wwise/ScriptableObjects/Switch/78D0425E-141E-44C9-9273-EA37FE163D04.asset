@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Organic
   id: 2934663280
   guid: 78D0425E-141E-44C9-9273-EA37FE163D04
-  WwiseSwitchGroupReference: {fileID: 0}
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 7dbf535d920ea63409b86ab3ea36063f, type: 2}

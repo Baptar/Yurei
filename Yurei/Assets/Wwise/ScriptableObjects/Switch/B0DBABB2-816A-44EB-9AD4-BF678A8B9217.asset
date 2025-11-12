@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Walk
   id: 2108779966
   guid: B0DBABB2-816A-44EB-9AD4-BF678A8B9217
-  WwiseSwitchGroupReference: {fileID: 0}
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 340f1598d8ecf5f44adf5af2e086469a, type: 2}

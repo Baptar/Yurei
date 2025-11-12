@@ -860,11 +860,28 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<SwitchContainer Name="Surface_Condition" ID="{21C75E4B-ED63-4F22-8E87-F9AD19EE7E7B}" ShortID="463393865">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Surface_Condition" ID="{0580FB90-AFFD-4B06-9D80-3E1331510447}" WorkUnitID="{F41F67E6-9372-44D8-8E8F-F18E6B836A7E}"/>
+								</Reference>
+							</ReferenceList>
+							<GroupingInfo/>
+						</SwitchContainer>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
 								<ItemRef Name="Walk" ID="{6564AF14-2C7E-41F1-B734-2D36A3282458}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Surface_Condition" ID="{21C75E4B-ED63-4F22-8E87-F9AD19EE7E7B}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Run" ID="{BF74D0DC-9602-4107-9602-36DA1F820559}"/>
@@ -885,6 +902,17 @@
 							</Grouping>
 						</GroupingList>
 					</GroupingInfo>
+				</SwitchContainer>
+				<SwitchContainer Name="Player_Breath" ID="{F0BDBA87-E5C5-4AB0-82E6-7CEC337CFC76}" ShortID="315583646">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+					</ReferenceList>
+					<GroupingInfo/>
 				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>

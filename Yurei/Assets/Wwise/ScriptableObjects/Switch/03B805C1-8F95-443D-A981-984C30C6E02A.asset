@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Dusty
   id: 136050290
   guid: 03B805C1-8F95-443D-A981-984C30C6E02A
-  WwiseSwitchGroupReference: {fileID: 0}
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: fb439711fa2be5c408f5cfe6cf726929, type: 2}
