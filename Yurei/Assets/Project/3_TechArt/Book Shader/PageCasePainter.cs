@@ -287,11 +287,5 @@ public class PageCasePainter : MonoBehaviour
         rt.height = height > width ? maxQualitySize : Mathf.Max((int)(height * proportionalValue), 1);
         
         cam.ResetAspect();
-        
-        //cam.gameObject.SetActive(false);
-//
-        //await Task.Delay(TimeSpan.FromSeconds(0.1f));
-//
-        //cam.gameObject.SetActive(true);
     }
 }

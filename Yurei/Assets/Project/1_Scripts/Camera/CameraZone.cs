@@ -1,4 +1,5 @@
 using DG.Tweening;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -32,16 +33,19 @@ public class CameraZone : MonoBehaviour
         // case new case in a different page
         if (pageNumberAssociated != BookManager.Instance.GetCurrentRightPageNumber())
         {
+            ThirdPersonController.Instance.SetPlayerCanMove(false);
             BookManager.Instance.OnPlayerFinishedPage(pageNumberAssociated < BookManager.Instance.GetCurrentRightPageNumber(),
                 () =>
                 {
                     ListenerManager.Instance.MoveListenerTo(this);
                     CameraManager.Instance.SwitchTo(zoneCamera, true, zonePosition, easeFunction, easeDuration);
+                    ThirdPersonController.Instance.SetPlayerCanMove(true);
                 });
         }
         // case new case in the same page
         else
         {
+            BubbleTransform.Instance.SetCameraBubble(zoneCamera);
             CameraManager.Instance.SwitchTo(zoneCamera, followPlayer, zonePosition, easeFunction, easeDuration);
             ListenerManager.Instance.MoveListenerTo(this);
         }
