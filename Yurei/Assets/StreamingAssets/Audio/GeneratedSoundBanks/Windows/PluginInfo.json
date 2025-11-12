@@ -4,25 +4,11 @@
   "BasePlatform": "Windows",
   "PluginLibs": [
    {
-    "LibName": "Wwise Compressor",
-    "LibId": "7077891",
-    "Type": "Effect",
-    "DLL": "AkCompressor",
-    "StaticLib": "AkCompressorFX"
-   },
-   {
     "LibName": "Wwise RoomVerb",
     "LibId": "7733251",
     "Type": "Effect",
     "DLL": "AkRoomVerb",
     "StaticLib": "AkRoomVerbFX"
-   },
-   {
-    "LibName": "Wwise Guitar Distortion",
-    "LibId": "8257539",
-    "Type": "Effect",
-    "DLL": "AkGuitarDistortion",
-    "StaticLib": "AkGuitarDistortionFX"
    },
    {
     "LibName": "System",
@@ -35,6 +21,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{AC43EF08-76A1-7167-E1CC-AE7773593BAD}"
+  "FileHash": "{BFC96AC8-4F88-3DCF-DCDD-B6CF26CB600C}"
  }
 }

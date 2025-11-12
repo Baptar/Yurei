@@ -23,7 +23,7 @@
 						<Action Name="" ID="{F48C8826-BE8D-4EE1-A481-548EBF7F4B7D}" ShortID="1072339023">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Rock_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}" WorkUnitID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}"/>
+									<ObjectRef Name="Template_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}" WorkUnitID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

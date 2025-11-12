@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09962f309f94b814b8c1f1cb6edf5c34, type: 3}
+  m_Name: 0580FB90-AFFD-4B06-9D80-3E1331510447
+  m_EditorClassIdentifier: 
+  objectName: Surface_Condition
+  id: 623872152
+  guid: 0580FB90-AFFD-4B06-9D80-3E1331510447

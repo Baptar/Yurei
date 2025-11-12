@@ -24,18 +24,6 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace MATERIAL
-        {
-            static const AkUniqueID GROUP = 3865314626U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID ORGANIC = 2934663280U;
-                static const AkUniqueID ROCK = 2144363834U;
-                static const AkUniqueID SNOW = 787898836U;
-            } // namespace SWITCH
-        } // namespace MATERIAL
-
         namespace PLAYERCYCLE
         {
             static const AkUniqueID GROUP = 1295475536U;
@@ -47,6 +35,41 @@ namespace AK
                 static const AkUniqueID WALK = 2108779966U;
             } // namespace SWITCH
         } // namespace PLAYERCYCLE
+
+        namespace SURFACE_CONDITION
+        {
+            static const AkUniqueID GROUP = 623872152U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BLOODY = 396412040U;
+                static const AkUniqueID DRY = 630539344U;
+                static const AkUniqueID DUSTY = 136050290U;
+                static const AkUniqueID HOLLOW = 815678804U;
+                static const AkUniqueID MUDDY = 3273609536U;
+                static const AkUniqueID WET = 1181096339U;
+            } // namespace SWITCH
+        } // namespace SURFACE_CONDITION
+
+        namespace SURFACE_MATERIAL
+        {
+            static const AkUniqueID GROUP = 1230601154U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID DIRT = 2195636714U;
+                static const AkUniqueID FABRIC = 1970351858U;
+                static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID HAIR = 3717304733U;
+                static const AkUniqueID ICE = 344481046U;
+                static const AkUniqueID LEAVES = 582824249U;
+                static const AkUniqueID ORGANIC = 2934663280U;
+                static const AkUniqueID ROCK = 2144363834U;
+                static const AkUniqueID SAND = 803837735U;
+                static const AkUniqueID SNOW = 787898836U;
+            } // namespace SWITCH
+        } // namespace SURFACE_MATERIAL
 
     } // namespace SWITCHES
 
@@ -64,11 +87,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBBUS = 2894416467U;
-        static const AkUniqueID JINGLEBUS = 590867056U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MOVABLEOBJECTSBUS = 2112977367U;
         static const AkUniqueID MUSICBUS = 2886307548U;
-        static const AkUniqueID PUPPETBUS = 1406467327U;
         static const AkUniqueID RVB = 695384145U;
         static const AkUniqueID SFXBUS = 3803850708U;
         static const AkUniqueID UI_MENUSBUS = 2401090920U;

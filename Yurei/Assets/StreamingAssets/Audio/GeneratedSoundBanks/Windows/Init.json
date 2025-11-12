@@ -10,30 +10,12 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{1EDBF2F4-E0AB-A8FC-57E1-D52F19C35DB3}",
+    "Hash": "{F3A822D6-5045-5DB0-EC15-2A5047AD78BC}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
-     "Custom": [
-      {
-       "Id": "101835093",
-       "Name": "Guitar Distortion (Custom)",
-       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicBus\\JingleBus\\[Effect Slot [0]: (Guitar Distortion)]\\Guitar Distortion (Custom)",
-       "GUID": "{C9203F2A-6B37-497F-87FD-3A537CA8E21D}",
-       "LibName": "Wwise Guitar Distortion",
-       "LibId": "8257539"
-      }
-     ],
      "ShareSets": [
-      {
-       "Id": "1416967478",
-       "Name": "All_Buttons_IN",
-       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\All_Buttons_IN",
-       "GUID": "{E5FFEBA7-4F6F-421E-ABB7-286C011BD0C8}",
-       "LibName": "Wwise Compressor",
-       "LibId": "7077891"
-      },
       {
        "Id": "2891462749",
        "Name": "Room_Medium_High_Absorbtion",
@@ -80,34 +62,6 @@
     },
     "Busses": [
      {
-      "Id": "590867056",
-      "Name": "JingleBus",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\MusicBus\\JingleBus",
-      "GUID": "{350A9A46-57D3-4F23-82B3-BC03C3775681}",
-      "Color": "14",
-      "PluginRefs": {
-       "Custom": [
-        {
-         "Id": "101835093"
-        }
-       ],
-       "ShareSets": [
-        {
-         "Id": "1416967478"
-        }
-       ]
-      },
-      "AuxBusRefs": [
-       {
-        "Id": "3633416828",
-        "Name": "Hall",
-        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB\\Hall",
-        "GUID": "{168AA74E-F128-4A65-AB94-C40BE7738E4E}",
-        "Color": "4"
-       }
-      ]
-     },
-     {
       "Id": "695384145",
       "Name": "RVB",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB",
@@ -122,25 +76,11 @@
       "Color": "16"
      },
      {
-      "Id": "1406467327",
-      "Name": "PuppetBus",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SfxBus\\PuppetBus",
-      "GUID": "{0C548E98-D102-418C-8456-F1B6C0DB13FC}",
-      "Color": "13"
-     },
-     {
       "Id": "2045367873",
       "Name": "VoiceBus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\VoiceBus",
       "GUID": "{885A9AFA-38F3-428E-9F93-414DA2023D0C}",
       "Color": "26"
-     },
-     {
-      "Id": "2112977367",
-      "Name": "MovableObjectsBus",
-      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SfxBus\\MovableObjectsBus",
-      "GUID": "{14655D3F-C790-42EC-9B70-6531E995B34A}",
-      "Color": "6"
      },
      {
       "Id": "2401090920",
@@ -232,6 +172,124 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "623872152",
+      "Name": "Surface_Condition",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition",
+      "GUID": "{0580FB90-AFFD-4B06-9D80-3E1331510447}",
+      "Switches": [
+       {
+        "Id": "136050290",
+        "Name": "Dusty",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Dusty",
+        "GUID": "{03B805C1-8F95-443D-A981-984C30C6E02A}"
+       },
+       {
+        "Id": "396412040",
+        "Name": "Bloody",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Bloody",
+        "GUID": "{27BEEE41-1362-44BD-B032-8551630C13F3}"
+       },
+       {
+        "Id": "630539344",
+        "Name": "Dry",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Dry",
+        "GUID": "{69C9A1D6-9FF0-430F-B6FD-4F93ED5D96F7}"
+       },
+       {
+        "Id": "815678804",
+        "Name": "Hollow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Hollow",
+        "GUID": "{88539CA7-A648-4E0F-8B8C-62E7534EF8B4}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Wet",
+        "GUID": "{9048B9FD-7906-4AFE-AB50-15433B7E1501}"
+       },
+       {
+        "Id": "3273609536",
+        "Name": "Muddy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Muddy",
+        "GUID": "{4AC11FCE-CBCB-40A4-805A-B56A11A3591F}"
+       }
+      ]
+     },
+     {
+      "Id": "1230601154",
+      "Name": "Surface_Material",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material",
+      "GUID": "{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}",
+      "Switches": [
+       {
+        "Id": "344481046",
+        "Name": "Ice",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Ice",
+        "GUID": "{1F3F05E4-C6A7-4B0A-ABBE-2D318807A88E}"
+       },
+       {
+        "Id": "582824249",
+        "Name": "Leaves",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Leaves",
+        "GUID": "{28C627A5-B9B4-47EB-B0FC-02B5A34B012E}"
+       },
+       {
+        "Id": "787898836",
+        "Name": "Snow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Snow",
+        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"
+       },
+       {
+        "Id": "803837735",
+        "Name": "Sand",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Sand",
+        "GUID": "{624171E9-43C7-4BD3-9F85-C4AB4F151ACF}"
+       },
+       {
+        "Id": "841620460",
+        "Name": "Concrete",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Concrete",
+        "GUID": "{4EA102C5-097D-4ED5-A097-4C1E00239EB7}"
+       },
+       {
+        "Id": "1970351858",
+        "Name": "Fabric",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Fabric",
+        "GUID": "{A5EB7253-BDF4-4CEA-9825-62D9E5008BEB}"
+       },
+       {
+        "Id": "2144363834",
+        "Name": "Rock",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Rock",
+        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"
+       },
+       {
+        "Id": "2195636714",
+        "Name": "Dirt",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Dirt",
+        "GUID": "{777E83D3-9557-41FA-8EBF-08CC7361A56D}"
+       },
+       {
+        "Id": "2934663280",
+        "Name": "Organic",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Organic",
+        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}"
+       },
+       {
+        "Id": "3717304733",
+        "Name": "Hair",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Hair",
+        "GUID": "{404EFEEB-9C6A-47E5-8C0C-0C97D2F02FBA}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Grass",
+        "GUID": "{D17E54FC-1A65-4896-9787-F27C55B8E347}"
+       }
+      ]
+     },
+     {
       "Id": "1295475536",
       "Name": "PlayerCycle",
       "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle",
@@ -256,36 +314,10 @@
         "GUID": "{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"
        }
       ]
-     },
-     {
-      "Id": "3865314626",
-      "Name": "Material",
-      "ObjectPath": "\\Switches\\Default Work Unit\\Material",
-      "GUID": "{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}",
-      "Switches": [
-       {
-        "Id": "787898836",
-        "Name": "Snow",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Snow",
-        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"
-       },
-       {
-        "Id": "2144363834",
-        "Name": "Rock",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Rock",
-        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"
-       },
-       {
-        "Id": "2934663280",
-        "Name": "Organic",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material\\Organic",
-        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}"
-       }
-      ]
      }
     ]
    }
   ],
-  "FileHash": "{157068FA-7BC6-F8DC-3827-257FB7DDBFBA}"
+  "FileHash": "{8520ED9F-DAC7-078B-310D-565452C22170}"
  }
 }

@@ -10,11 +10,29 @@
 						<Switch Name="Idle" ID="{B2894C90-A958-484D-AACB-622E4E741BC4}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="Material" ID="{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}">
+				<SwitchGroup Name="Surface_Material" ID="{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}">
 					<ChildrenList>
 						<Switch Name="Organic" ID="{78D0425E-141E-44C9-9273-EA37FE163D04}"/>
 						<Switch Name="Rock" ID="{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"/>
 						<Switch Name="Snow" ID="{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"/>
+						<Switch Name="Grass" ID="{D17E54FC-1A65-4896-9787-F27C55B8E347}"/>
+						<Switch Name="Dirt" ID="{777E83D3-9557-41FA-8EBF-08CC7361A56D}"/>
+						<Switch Name="Ice" ID="{1F3F05E4-C6A7-4B0A-ABBE-2D318807A88E}"/>
+						<Switch Name="Leaves" ID="{28C627A5-B9B4-47EB-B0FC-02B5A34B012E}"/>
+						<Switch Name="Sand" ID="{624171E9-43C7-4BD3-9F85-C4AB4F151ACF}"/>
+						<Switch Name="Concrete" ID="{4EA102C5-097D-4ED5-A097-4C1E00239EB7}"/>
+						<Switch Name="Fabric" ID="{A5EB7253-BDF4-4CEA-9825-62D9E5008BEB}"/>
+						<Switch Name="Hair" ID="{404EFEEB-9C6A-47E5-8C0C-0C97D2F02FBA}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Surface_Condition" ID="{0580FB90-AFFD-4B06-9D80-3E1331510447}">
+					<ChildrenList>
+						<Switch Name="Dry" ID="{69C9A1D6-9FF0-430F-B6FD-4F93ED5D96F7}"/>
+						<Switch Name="Wet" ID="{9048B9FD-7906-4AFE-AB50-15433B7E1501}"/>
+						<Switch Name="Muddy" ID="{4AC11FCE-CBCB-40A4-805A-B56A11A3591F}"/>
+						<Switch Name="Hollow" ID="{88539CA7-A648-4E0F-8B8C-62E7534EF8B4}"/>
+						<Switch Name="Bloody" ID="{27BEEE41-1362-44BD-B032-8551630C13F3}"/>
+						<Switch Name="Dusty" ID="{03B805C1-8F95-443D-A981-984C30C6E02A}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

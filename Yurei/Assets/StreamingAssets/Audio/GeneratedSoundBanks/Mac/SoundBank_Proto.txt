@@ -8,27 +8,32 @@ Event	ID	Name			Wwise Object Path	Notes
 	4156323864	Play_Forest_Amb			\WU_Ambience\WU_Pads\Play_Forest_Amb	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	1230601154	Surface_Material			\Default Work Unit\Surface_Material	
 	1295475536	PlayerCycle			\Default Work Unit\PlayerCycle	
-	3865314626	Material			\Default Work Unit\Material	
 
 Switch	ID	Name	Switch Group			Notes
+	344481046	Ice	Surface_Material			
+	582824249	Leaves	Surface_Material			
+	787898836	Snow	Surface_Material			
+	803837735	Sand	Surface_Material			
+	841620460	Concrete	Surface_Material			
+	1970351858	Fabric	Surface_Material			
+	2144363834	Rock	Surface_Material			
+	2195636714	Dirt	Surface_Material			
+	2934663280	Organic	Surface_Material			
+	3717304733	Hair	Surface_Material			
+	4248645337	Grass	Surface_Material			
 	712161704	Run	PlayerCycle			
 	1874288895	Idle	PlayerCycle			
 	2108779966	Walk	PlayerCycle			
-	787898836	Snow	Material			
-	2144363834	Rock	Material			
-	2934663280	Organic	Material			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3130544216	Book_Panning			\Default Work Unit\Book_Panning	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	590867056	JingleBus			\Default Work Unit\Master Audio Bus\MusicBus\JingleBus	
 	695384145	RVB			\Default Work Unit\Master Audio Bus\RVB	
 	1372881427	UIBus			\Default Work Unit\Master Audio Bus\UIBus	
-	1406467327	PuppetBus			\Default Work Unit\Master Audio Bus\SfxBus\PuppetBus	
 	2045367873	VoiceBus			\Default Work Unit\Master Audio Bus\VoiceBus	
-	2112977367	MovableObjectsBus			\Default Work Unit\Master Audio Bus\SfxBus\MovableObjectsBus	
 	2401090920	UI_MenusBus			\Default Work Unit\Master Audio Bus\UIBus\UI_MenusBus	
 	2886307548	MusicBus			\Default Work Unit\Master Audio Bus\MusicBus	
 	2894416467	AmbBus			\Default Work Unit\Master Audio Bus\AmbBus	
@@ -41,8 +46,6 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4103918620	Small_Room			\Default Work Unit\Master Audio Bus\RVB\Small_Room	
 
 Effect plug-ins	ID	Name	Type				Notes
-	101835093	Guitar Distortion (Custom)	Wwise Guitar Distortion			
-	1416967478	All_Buttons_IN	Wwise Compressor			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
 	3442768367	Hall_Large_Dark	Wwise RoomVerb			
