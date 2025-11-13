@@ -45,7 +45,7 @@ public class CameraZone : MonoBehaviour
         // case new case in the same page
         else
         {
-            BubbleTransform.Instance.SetCameraBubble(zoneCamera);
+            BubbleTransform.Instance?.SetCameraBubble(zoneCamera);
             CameraManager.Instance.SwitchTo(zoneCamera, followPlayer, zonePosition, easeFunction, easeDuration);
             ListenerManager.Instance.MoveListenerTo(this);
         }
