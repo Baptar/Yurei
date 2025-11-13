@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{08824E71-3F81-47A8-9ED3-FF597A73E8C3}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Foley" ID="{08824E71-3F81-47A8-9ED3-FF597A73E8C3}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="18"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchGroup Name="PlayerCycle" ID="{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="18"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Walk" ID="{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"/>
+						<Switch Name="Run" ID="{A4B19789-DA24-4379-9C2E-5965847713DA}"/>
+						<Switch Name="Idle" ID="{B2894C90-A958-484D-AACB-622E4E741BC4}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<WorkUnit Name="Footstep" ID="{90F8043A-846F-472B-9705-A52066D20A65}" PersistMode="Reference"/>
+				<WorkUnit Name="Breath" ID="{C97F5910-B879-4549-83D1-6D2B71B80C50}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

@@ -7,8 +7,44 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<WorkUnit Name="WU_Ponctual_Objects" ID="{9B2BD863-A6DA-4298-B1CD-892CBF22CB74}" PersistMode="Reference"/>
-				<WorkUnit Name="WU_Pads" ID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}" PersistMode="Reference"/>
+				<ActorMixer Name="Ambience" ID="{78B9521F-227B-4206-9A3F-8B776E1ABB60}" ShortID="69393129">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AmbBus" ID="{1808A7C8-6E5F-4188-ADEF-CF7E64F64B42}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Pads" ID="{8DB76ED4-A042-48A9-9081-52D983117528}" ShortID="710824480">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<WorkUnit Name="WU_Pads" ID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}" PersistMode="Reference"/>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Ponctual_Objects" ID="{59F6F1CA-2103-4C18-BD4F-FEF6659879A2}" ShortID="125996496">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<WorkUnit Name="WU_Ponctual_Objects" ID="{9B2BD863-A6DA-4298-B1CD-892CBF22CB74}" PersistMode="Reference"/>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

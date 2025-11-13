@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="WU_Foley" ID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="18"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="Foley" ID="{C8BF991C-1FF5-4346-B5F2-476E8DF2A470}" ShortID="307500565">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="FoleyBus" ID="{74809B05-A399-4FBC-97FA-FB347F2EFA3A}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Clothes" ID="{2803BC1F-89A7-4F69-A66B-95FA5CE9826D}" ShortID="1001736974">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<WorkUnit Name="WU_Clothes" ID="{B43622CB-9BF9-48CA-8F66-99EA1010E2B2}" PersistMode="Reference"/>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Gear" ID="{1D7E3F3C-80BC-46D6-A752-0E99E2D54F4B}" ShortID="652104636">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<WorkUnit Name="WU_Gear" ID="{A529DAF0-4659-4903-90DE-F54B38953401}" PersistMode="Reference"/>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Surface" ID="{3A50F489-62E3-4D25-826F-44D95C479A43}" ShortID="28133266">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<WorkUnit Name="WU_Surface" ID="{A4B74698-FDEE-4D01-B14D-D49CD8631B2A}" PersistMode="Reference"/>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Breath" ID="{78251CCE-5C78-4EB0-BC59-1540F4546DF4}" ShortID="464564657">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="17"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<WorkUnit Name="WU_Breath" ID="{3700935F-AE1D-4F26-B46F-DB824AE23BEF}" PersistMode="Reference"/>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

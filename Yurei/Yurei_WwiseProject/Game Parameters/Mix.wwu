@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{87851FF0-23E4-4922-97CC-C6939BCE5E75}" SchemaVersion="123">
+	<GameParameters>
+		<WorkUnit Name="Mix" ID="{87851FF0-23E4-4922-97CC-C6939BCE5E75}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_VoiceSidechain" ID="{79F4FD78-BDE3-4B83-9FA5-B2514D272B5D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

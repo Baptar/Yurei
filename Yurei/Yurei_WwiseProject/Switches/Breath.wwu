@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C97F5910-B879-4549-83D1-6D2B71B80C50}" SchemaVersion="123" RootDocumentID="{08824E71-3F81-47A8-9ED3-FF597A73E8C3}" ParentDocumentID="{08824E71-3F81-47A8-9ED3-FF597A73E8C3}">
+	<Switches>
+		<WorkUnit Name="Breath" ID="{C97F5910-B879-4549-83D1-6D2B71B80C50}" OwnerID="{08824E71-3F81-47A8-9ED3-FF597A73E8C3}" PersistMode="Nested"/>
+	</Switches>
+</WwiseDocument>

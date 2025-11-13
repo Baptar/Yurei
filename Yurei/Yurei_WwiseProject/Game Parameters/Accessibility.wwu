@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A6A6933D-EDF9-428C-9E6D-FFA778E42400}" SchemaVersion="123">
+	<GameParameters>
+		<WorkUnit Name="Accessibility" ID="{A6A6933D-EDF9-428C-9E6D-FFA778E42400}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="VolumeControl" ID="{0740F568-39B0-46F4-A802-D89979A690E4}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A2F1F75C-05B1-40D0-8306-08694EB04ADE}" SchemaVersion="123" RootDocumentID="{875972E4-C215-4306-ADB6-B184F1A15653}" ParentDocumentID="{875972E4-C215-4306-ADB6-B184F1A15653}">
+	<Events>
+		<WorkUnit Name="WU_Player_Movements" ID="{A2F1F75C-05B1-40D0-8306-08694EB04ADE}" OwnerID="{875972E4-C215-4306-ADB6-B184F1A15653}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Player_Walk" ID="{E48D4166-4FBF-4144-86D2-1B4F66AFC9A3}">
+					<ChildrenList>
+						<Action Name="" ID="{D50141C7-B20E-4DF2-A7F4-0D68C4E5A76C}" ShortID="216659348">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surface_Walk" ID="{6564AF14-2C7E-41F1-B734-2D36A3282458}" WorkUnitID="{A4B74698-FDEE-4D01-B14D-D49CD8631B2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4D7F5351-4215-4BB0-8822-5C9CD46791A2}" ShortID="68125901">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clothes_Walk" ID="{D684280D-72FF-4507-9542-EFB4F6B87B2B}" WorkUnitID="{B43622CB-9BF9-48CA-8F66-99EA1010E2B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{81C426EE-843E-47F3-B9DF-B11D5FB58EAC}" ShortID="174786836">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gear_Walk" ID="{B458193E-3A65-4CD2-9C05-D8FFA95F499F}" WorkUnitID="{A529DAF0-4659-4903-90DE-F54B38953401}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C86F2750-6C49-485E-8BC7-BD0D79B57D57}" ShortID="267811532">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surface_Condition" ID="{21C75E4B-ED63-4F22-8E87-F9AD19EE7E7B}" WorkUnitID="{A4B74698-FDEE-4D01-B14D-D49CD8631B2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footstep_Basic" ID="{D1ADA099-9DB9-49AD-98E4-02BB32F6675D}">
+					<ChildrenList>
+						<Action Name="" ID="{F48C8826-BE8D-4EE1-A481-548EBF7F4B7D}" ShortID="1072339023">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Template_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}" WorkUnitID="{A4B74698-FDEE-4D01-B14D-D49CD8631B2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Run" ID="{1499B5E9-A809-45A7-98CE-887343489C54}">
+					<ChildrenList>
+						<Action Name="" ID="{85DCC583-6BFE-475D-84E3-D79FFA90FD0B}" ShortID="753064690">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surface_Run" ID="{BF74D0DC-9602-4107-9602-36DA1F820559}" WorkUnitID="{A4B74698-FDEE-4D01-B14D-D49CD8631B2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C0960CD9-2CC0-426D-B115-12F9654C421A}" ShortID="804775525">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clothes_Run" ID="{8BA1819A-575B-449B-AED3-6374FF19C833}" WorkUnitID="{B43622CB-9BF9-48CA-8F66-99EA1010E2B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{826B566E-F966-4ECB-A49A-E622B3E2316B}" ShortID="90420966">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gear_Run" ID="{B4D947D2-1FD8-42E2-9FC3-2EC86AB4BF71}" WorkUnitID="{A529DAF0-4659-4903-90DE-F54B38953401}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7487EC1A-2394-4836-AAC9-9919AA2F7611}" ShortID="777577283">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Surface_Condition" ID="{21C75E4B-ED63-4F22-8E87-F9AD19EE7E7B}" WorkUnitID="{A4B74698-FDEE-4D01-B14D-D49CD8631B2A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

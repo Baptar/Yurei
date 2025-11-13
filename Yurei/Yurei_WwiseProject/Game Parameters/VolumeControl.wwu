@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0740F568-39B0-46F4-A802-D89979A690E4}" SchemaVersion="123" RootDocumentID="{A6A6933D-EDF9-428C-9E6D-FFA778E42400}" ParentDocumentID="{A6A6933D-EDF9-428C-9E6D-FFA778E42400}">
+	<GameParameters>
+		<WorkUnit Name="VolumeControl" ID="{0740F568-39B0-46F4-A802-D89979A690E4}" OwnerID="{A6A6933D-EDF9-428C-9E6D-FFA778E42400}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="RTPC_VoiceVolume" ID="{EF923FF9-C3BB-4418-81E7-EA804BB1DBEB}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="50"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="50"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_SFXVolume" ID="{83F22104-B81E-400B-A1F5-180E51FC0307}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="50"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="50"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_AmbVolume" ID="{223ADB36-8249-4F42-BEBA-84CF92120B8D}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="50"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="50"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_MusicVolume" ID="{7F12CA84-0145-486B-97B3-66B155BCC9A0}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="50"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="50"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_UIVolume" ID="{3F753E2D-A5B4-42CB-88D6-AA675CF2A135}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="50"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="50"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_MasterVolume" ID="{64583155-F36C-4DB1-A15D-8F7EBE92406C}">
+					<PropertyList>
+						<Property Name="FilterTimeDown" Type="Real64" Value="50"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="50"/>
+						<Property Name="InitialValue" Type="Real64" Value="0.8"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

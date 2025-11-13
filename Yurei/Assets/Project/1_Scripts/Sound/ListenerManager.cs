@@ -36,7 +36,7 @@ public class ListenerManager : MonoBehaviour
             
         Sequence sequence = DOTween.Sequence();
 
-        sequence.Append(gameObject.transform.DOMove(zoneCamera.GetCameraAssociated().transform.position, zoneCamera.timeCameraListener)).SetEase(zoneCamera.easeCameraListener)
-            .Join(gameObject.transform.DORotateQuaternion(zoneCamera.GetCameraAssociated().transform.rotation, zoneCamera.timeCameraListener)).SetEase(zoneCamera.easeCameraListener);
+        sequence.Append(gameObject.transform.DOMove(zoneCamera.GetCameraAssociated().transform.position, zoneCamera.timeAudioListener)).SetEase(zoneCamera.easeAudioListener)
+            .Join(gameObject.transform.DORotateQuaternion(zoneCamera.GetCameraAssociated().transform.rotation, zoneCamera.timeAudioListener)).SetEase(zoneCamera.easeAudioListener);
     }
 }

@@ -118,7 +118,7 @@
 						</TransmissionHPFUsage>
 					</CurveUsageInfoList>
 				</Attenuation>
-				<Attenuation Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" ShortID="840967429">
+				<Attenuation Name="Attenuation_12m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" ShortID="840967429">
 					<PropertyList>
 						<Property Name="RadiusMax" Type="Real64" Value="12"/>
 					</PropertyList>

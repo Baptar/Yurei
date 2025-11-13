@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3700935F-AE1D-4F26-B46F-DB824AE23BEF}" SchemaVersion="123" RootDocumentID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" ParentDocumentID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}">
+	<AudioObjects>
+		<WorkUnit Name="WU_Breath" ID="{3700935F-AE1D-4F26-B46F-DB824AE23BEF}" OwnerID="{78251CCE-5C78-4EB0-BC59-1540F4546DF4}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="17"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<SwitchContainer Name="Player_Breath" ID="{F0BDBA87-E5C5-4AB0-82E6-7CEC337CFC76}" ShortID="315583646">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+					</ReferenceList>
+					<GroupingInfo/>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

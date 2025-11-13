@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A529DAF0-4659-4903-90DE-F54B38953401}" SchemaVersion="123" RootDocumentID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}" ParentDocumentID="{FB082591-4E53-4205-86ED-E76BC3BCAA5C}">
+	<AudioObjects>
+		<WorkUnit Name="WU_Gear" ID="{A529DAF0-4659-4903-90DE-F54B38953401}" OwnerID="{1D7E3F3C-80BC-46D6-A752-0E99E2D54F4B}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchContainer Name="Gear_Walk" ID="{B458193E-3A65-4CD2-9C05-D8FFA95F499F}" ShortID="586994877">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="Gear_Type" ID="{9E6C1A55-8F5D-4760-AAA4-AADDA21A848D}" WorkUnitID="{90F8043A-846F-472B-9705-A52066D20A65}"/>
+						</Reference>
+					</ReferenceList>
+					<GroupingInfo/>
+				</SwitchContainer>
+				<SwitchContainer Name="Gear_Run" ID="{B4D947D2-1FD8-42E2-9FC3-2EC86AB4BF71}" ShortID="2361259">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1C551DA5-BF66-45EC-94BD-12BDACF37727}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="Gear_Type" ID="{9E6C1A55-8F5D-4760-AAA4-AADDA21A848D}" WorkUnitID="{90F8043A-846F-472B-9705-A52066D20A65}"/>
+						</Reference>
+					</ReferenceList>
+					<GroupingInfo/>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

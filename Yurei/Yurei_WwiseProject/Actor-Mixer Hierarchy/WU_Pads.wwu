@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}" SchemaVersion="123" RootDocumentID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}" ParentDocumentID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}">
 	<AudioObjects>
-		<WorkUnit Name="WU_Pads" ID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}" OwnerID="{1670D4B4-7979-4D76-BEB7-FEEC54D8B8FE}" PersistMode="Nested">
+		<WorkUnit Name="WU_Pads" ID="{FCBC5DFA-9C71-47F3-9D1B-41DAD3524CE4}" OwnerID="{8DB76ED4-A042-48A9-9081-52D983117528}" PersistMode="Nested">
 			<ChildrenList>
 				<RandomSequenceContainer Name="Industrial_Amb" ID="{52960CB9-BB61-498B-A605-AA97D22447CC}" ShortID="759326192">
 					<PropertyList>
@@ -13,7 +13,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+							<ObjectRef Name="Attenuation_12m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
@@ -64,7 +64,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+							<ObjectRef Name="Attenuation_12m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
@@ -115,7 +115,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Attenuation_10m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
+							<ObjectRef Name="Attenuation_12m" ID="{FB2FEE74-9BD4-4DE8-A5B6-7CB3D46652CD}" WorkUnitID="{7798741F-3588-4D46-A59C-49C48685B8EE}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6149EBCC-533D-4B08-8377-7E3ECEE04425}"/>
