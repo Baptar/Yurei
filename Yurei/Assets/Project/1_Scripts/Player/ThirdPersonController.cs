@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using AK.Wwise;
 using EditorAttributes;
@@ -10,6 +11,8 @@ namespace StarterAssets
     [RequireComponent(typeof(BoxCollider))]
     public class ThirdPersonController : MonoBehaviour
     {
+        public static ThirdPersonController Instance;
+        
         [Header("Movement Settings")]
         [GUIColor(GUIColor.Cyan)]
         [SerializeField] private float moveSpeed = 2f;
@@ -84,6 +87,9 @@ namespace StarterAssets
         private int _animIDMotionSpeed;
         
         private IInteractable _currentInteractable;
+        private bool canMove = true;
+
+        private void Awake() => Instance = this;
 
         private void Start()
         {
@@ -153,7 +159,7 @@ namespace StarterAssets
             Vector2 moveInput = _input.Move;
             float targetSpeed = _input.Sprint ? sprintSpeed : moveSpeed;
 
-            if (moveInput == Vector2.zero) targetSpeed = 0f;
+            if (moveInput == Vector2.zero || !canMove) targetSpeed = 0f;
 
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0f, _controller.velocity.z).magnitude;
             float speedOffset = 0.1f;
@@ -195,7 +201,7 @@ namespace StarterAssets
             {
                 _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg;
                 float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, rotationSmoothTime);
-                transform.rotation = Quaternion.Euler(0f, rotation, 0f);
+                if (canMove) transform.rotation = Quaternion.Euler(0f, rotation, 0f);
             }
 
             Vector3 targetDirection = Quaternion.Euler(0f, _targetRotation, 0f) * Vector3.forward;
@@ -263,6 +269,11 @@ namespace StarterAssets
                 interactable.UnHovered();
                 _currentInteractable = null;
             }
+        }
+
+        public void SetPlayerCanMove(bool value)
+        {
+            canMove = value;
         }
     }
 }
