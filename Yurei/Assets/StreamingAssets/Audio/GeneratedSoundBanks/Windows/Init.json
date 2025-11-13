@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{F3A822D6-5045-5DB0-EC15-2A5047AD78BC}",
+    "Hash": "{A02A7D6F-2C08-BCFD-0BD2-2C914492A57A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -67,6 +67,13 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\RVB",
       "GUID": "{4BF5A1F5-63EC-47CA-94DA-534CB41FC8E7}",
       "Color": "4"
+     },
+     {
+      "Id": "1216476988",
+      "Name": "FoleyBus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SfxBus\\FoleyBus",
+      "GUID": "{74809B05-A399-4FBC-97FA-FB347F2EFA3A}",
+      "Color": "18"
      },
      {
       "Id": "1372881427",
@@ -164,160 +171,292 @@
     ],
     "GameParameters": [
      {
+      "Id": "1202556277",
+      "Name": "RTPC_VoiceSidechain",
+      "ObjectPath": "\\Game Parameters\\Mix\\RTPC_VoiceSidechain",
+      "GUID": "{79F4FD78-BDE3-4B83-9FA5-B2514D272B5D}"
+     },
+     {
+      "Id": "1226769967",
+      "Name": "RTPC_AmbVolume",
+      "ObjectPath": "\\Game Parameters\\Accessibility\\VolumeControl\\RTPC_AmbVolume",
+      "GUID": "{223ADB36-8249-4F42-BEBA-84CF92120B8D}"
+     },
+     {
+      "Id": "2378823330",
+      "Name": "RTPC_MusicVolume",
+      "ObjectPath": "\\Game Parameters\\Accessibility\\VolumeControl\\RTPC_MusicVolume",
+      "GUID": "{7F12CA84-0145-486B-97B3-66B155BCC9A0}"
+     },
+     {
+      "Id": "2582501215",
+      "Name": "RTPC_MasterVolume",
+      "ObjectPath": "\\Game Parameters\\Accessibility\\VolumeControl\\RTPC_MasterVolume",
+      "GUID": "{64583155-F36C-4DB1-A15D-8F7EBE92406C}"
+     },
+     {
+      "Id": "2644490154",
+      "Name": "RTPC_SFXVolume",
+      "ObjectPath": "\\Game Parameters\\Accessibility\\VolumeControl\\RTPC_SFXVolume",
+      "GUID": "{83F22104-B81E-400B-A1F5-180E51FC0307}"
+     },
+     {
       "Id": "3130544216",
       "Name": "Book_Panning",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Book_Panning",
       "GUID": "{BD7CCCD1-A90D-4FE4-BED2-E954A90AD3DF}"
+     },
+     {
+      "Id": "3141145287",
+      "Name": "RTPC_UIVolume",
+      "ObjectPath": "\\Game Parameters\\Accessibility\\VolumeControl\\RTPC_UIVolume",
+      "GUID": "{3F753E2D-A5B4-42CB-88D6-AA675CF2A135}"
+     },
+     {
+      "Id": "3304106241",
+      "Name": "RTPC_VoiceVolume",
+      "ObjectPath": "\\Game Parameters\\Accessibility\\VolumeControl\\RTPC_VoiceVolume",
+      "GUID": "{EF923FF9-C3BB-4418-81E7-EA804BB1DBEB}"
      }
     ],
     "SwitchGroups": [
      {
       "Id": "623872152",
       "Name": "Surface_Condition",
-      "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition",
+      "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition",
       "GUID": "{0580FB90-AFFD-4B06-9D80-3E1331510447}",
+      "Color": "18",
       "Switches": [
        {
         "Id": "136050290",
         "Name": "Dusty",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Dusty",
-        "GUID": "{03B805C1-8F95-443D-A981-984C30C6E02A}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition\\Dusty",
+        "GUID": "{03B805C1-8F95-443D-A981-984C30C6E02A}",
+        "Color": "18"
        },
        {
         "Id": "396412040",
         "Name": "Bloody",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Bloody",
-        "GUID": "{27BEEE41-1362-44BD-B032-8551630C13F3}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition\\Bloody",
+        "GUID": "{27BEEE41-1362-44BD-B032-8551630C13F3}",
+        "Color": "18"
        },
        {
         "Id": "630539344",
         "Name": "Dry",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Dry",
-        "GUID": "{69C9A1D6-9FF0-430F-B6FD-4F93ED5D96F7}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition\\Dry",
+        "GUID": "{69C9A1D6-9FF0-430F-B6FD-4F93ED5D96F7}",
+        "Color": "18"
        },
        {
         "Id": "815678804",
         "Name": "Hollow",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Hollow",
-        "GUID": "{88539CA7-A648-4E0F-8B8C-62E7534EF8B4}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition\\Hollow",
+        "GUID": "{88539CA7-A648-4E0F-8B8C-62E7534EF8B4}",
+        "Color": "18"
        },
        {
         "Id": "1181096339",
         "Name": "Wet",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Wet",
-        "GUID": "{9048B9FD-7906-4AFE-AB50-15433B7E1501}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition\\Wet",
+        "GUID": "{9048B9FD-7906-4AFE-AB50-15433B7E1501}",
+        "Color": "18"
        },
        {
         "Id": "3273609536",
         "Name": "Muddy",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Condition\\Muddy",
-        "GUID": "{4AC11FCE-CBCB-40A4-805A-B56A11A3591F}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Condition\\Muddy",
+        "GUID": "{4AC11FCE-CBCB-40A4-805A-B56A11A3591F}",
+        "Color": "18"
        }
       ]
      },
      {
       "Id": "1230601154",
       "Name": "Surface_Material",
-      "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material",
+      "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material",
       "GUID": "{EAC8560D-6B0D-4B8F-9CF7-69DBB97A23CB}",
+      "Color": "18",
       "Switches": [
        {
         "Id": "344481046",
         "Name": "Ice",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Ice",
-        "GUID": "{1F3F05E4-C6A7-4B0A-ABBE-2D318807A88E}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Ice",
+        "GUID": "{1F3F05E4-C6A7-4B0A-ABBE-2D318807A88E}",
+        "Color": "18"
        },
        {
         "Id": "582824249",
         "Name": "Leaves",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Leaves",
-        "GUID": "{28C627A5-B9B4-47EB-B0FC-02B5A34B012E}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Leaves",
+        "GUID": "{28C627A5-B9B4-47EB-B0FC-02B5A34B012E}",
+        "Color": "18"
        },
        {
         "Id": "787898836",
         "Name": "Snow",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Snow",
-        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Snow",
+        "GUID": "{B9365A0A-191A-4799-8FA9-9DA6E8BF1804}",
+        "Color": "18"
        },
        {
         "Id": "803837735",
         "Name": "Sand",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Sand",
-        "GUID": "{624171E9-43C7-4BD3-9F85-C4AB4F151ACF}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Sand",
+        "GUID": "{624171E9-43C7-4BD3-9F85-C4AB4F151ACF}",
+        "Color": "18"
        },
        {
         "Id": "841620460",
         "Name": "Concrete",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Concrete",
-        "GUID": "{4EA102C5-097D-4ED5-A097-4C1E00239EB7}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Concrete",
+        "GUID": "{4EA102C5-097D-4ED5-A097-4C1E00239EB7}",
+        "Color": "18"
        },
        {
         "Id": "1970351858",
         "Name": "Fabric",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Fabric",
-        "GUID": "{A5EB7253-BDF4-4CEA-9825-62D9E5008BEB}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Fabric",
+        "GUID": "{A5EB7253-BDF4-4CEA-9825-62D9E5008BEB}",
+        "Color": "18"
        },
        {
         "Id": "2144363834",
         "Name": "Rock",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Rock",
-        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Rock",
+        "GUID": "{E84E3F72-C51D-47D8-BA53-90E1705CFEB2}",
+        "Color": "18"
        },
        {
         "Id": "2195636714",
         "Name": "Dirt",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Dirt",
-        "GUID": "{777E83D3-9557-41FA-8EBF-08CC7361A56D}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Dirt",
+        "GUID": "{777E83D3-9557-41FA-8EBF-08CC7361A56D}",
+        "Color": "18"
        },
        {
         "Id": "2934663280",
         "Name": "Organic",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Organic",
-        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Organic",
+        "GUID": "{78D0425E-141E-44C9-9273-EA37FE163D04}",
+        "Color": "18"
        },
        {
         "Id": "3717304733",
         "Name": "Hair",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Hair",
-        "GUID": "{404EFEEB-9C6A-47E5-8C0C-0C97D2F02FBA}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Hair",
+        "GUID": "{404EFEEB-9C6A-47E5-8C0C-0C97D2F02FBA}",
+        "Color": "18"
        },
        {
         "Id": "4248645337",
         "Name": "Grass",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Surface_Material\\Grass",
-        "GUID": "{D17E54FC-1A65-4896-9787-F27C55B8E347}"
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Surface_Material\\Grass",
+        "GUID": "{D17E54FC-1A65-4896-9787-F27C55B8E347}",
+        "Color": "18"
        }
       ]
      },
      {
       "Id": "1295475536",
       "Name": "PlayerCycle",
-      "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle",
+      "ObjectPath": "\\Switches\\Foley\\PlayerCycle",
       "GUID": "{91004A74-DB1E-4E0B-BF64-767FD1F4F87D}",
+      "Color": "18",
       "Switches": [
        {
         "Id": "712161704",
         "Name": "Run",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Run",
-        "GUID": "{A4B19789-DA24-4379-9C2E-5965847713DA}"
+        "ObjectPath": "\\Switches\\Foley\\PlayerCycle\\Run",
+        "GUID": "{A4B19789-DA24-4379-9C2E-5965847713DA}",
+        "Color": "18"
        },
        {
         "Id": "1874288895",
         "Name": "Idle",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Idle",
-        "GUID": "{B2894C90-A958-484D-AACB-622E4E741BC4}"
+        "ObjectPath": "\\Switches\\Foley\\PlayerCycle\\Idle",
+        "GUID": "{B2894C90-A958-484D-AACB-622E4E741BC4}",
+        "Color": "18"
        },
        {
         "Id": "2108779966",
         "Name": "Walk",
-        "ObjectPath": "\\Switches\\Default Work Unit\\PlayerCycle\\Walk",
-        "GUID": "{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}"
+        "ObjectPath": "\\Switches\\Foley\\PlayerCycle\\Walk",
+        "GUID": "{B0DBABB2-816A-44EB-9AD4-BF678A8B9217}",
+        "Color": "18"
+       }
+      ]
+     },
+     {
+      "Id": "3303080338",
+      "Name": "Clothes_Type",
+      "ObjectPath": "\\Switches\\Foley\\Footstep\\Clothes_Type",
+      "GUID": "{DCC472BB-BE58-4505-B298-A50CEBB7CE60}",
+      "Color": "18",
+      "Switches": [
+       {
+        "Id": "1935470627",
+        "Name": "Light",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Clothes_Type\\Light",
+        "GUID": "{2653716F-CBA7-43D6-8F2E-9118507FC6EA}",
+        "Color": "18"
+       },
+       {
+        "Id": "2732489590",
+        "Name": "Heavy",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Clothes_Type\\Heavy",
+        "GUID": "{9F9FAA42-803E-4CA3-BE12-75E4205B0885}",
+        "Color": "18"
+       },
+       {
+        "Id": "2849147824",
+        "Name": "Medium",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Clothes_Type\\Medium",
+        "GUID": "{108489E8-6A56-4C3D-B30C-7AD0356AE16B}",
+        "Color": "18"
+       }
+      ]
+     },
+     {
+      "Id": "4185872887",
+      "Name": "Gear_Type",
+      "ObjectPath": "\\Switches\\Foley\\Footstep\\Gear_Type",
+      "GUID": "{9E6C1A55-8F5D-4760-AAA4-AADDA21A848D}",
+      "Color": "18",
+      "Switches": [
+       {
+        "Id": "1935470627",
+        "Name": "Light",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Gear_Type\\Light",
+        "GUID": "{E8738AA8-8853-4B31-8BFE-84C196838AC7}",
+        "Color": "18"
+       },
+       {
+        "Id": "2732489590",
+        "Name": "Heavy",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Gear_Type\\Heavy",
+        "GUID": "{9CA0C3D4-1BE4-4867-AD83-3C512E9BDCEB}",
+        "Color": "18"
+       },
+       {
+        "Id": "2849147824",
+        "Name": "Medium",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Gear_Type\\Medium",
+        "GUID": "{B6F557C3-0979-4C58-B020-12335A49E970}",
+        "Color": "18"
+       },
+       {
+        "Id": "4248742144",
+        "Name": "Nothing",
+        "ObjectPath": "\\Switches\\Foley\\Footstep\\Gear_Type\\Nothing",
+        "GUID": "{460B0F4D-95E5-4A75-9C10-A5424C1BA02D}",
+        "Color": "18"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{8520ED9F-DAC7-078B-310D-565452C22170}"
+  "FileHash": "{1FFC1F74-D646-B852-FE9A-9FA75E1A8899}"
  }
 }

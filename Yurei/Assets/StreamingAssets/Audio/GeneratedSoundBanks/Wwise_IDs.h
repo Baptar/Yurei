@@ -13,17 +13,43 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_FOOTSTEP = 1602358412U;
         static const AkUniqueID PLAY_FOOTSTEP_BASIC = 1897435707U;
         static const AkUniqueID PLAY_FOREST_AMB = 4156323864U;
         static const AkUniqueID PLAY_INDUSTRIAL_AMB = 2120142010U;
         static const AkUniqueID PLAY_MOUNTAIN_AMB = 4031737482U;
         static const AkUniqueID PLAY_MUSICBOX_LOOP = 3355550791U;
         static const AkUniqueID PLAY_PROPELLER_LOOP = 75416360U;
+        static const AkUniqueID PLAYER_RUN = 1136018332U;
+        static const AkUniqueID PLAYER_WALK = 2147561130U;
     } // namespace EVENTS
 
     namespace SWITCHES
     {
+        namespace CLOTHES_TYPE
+        {
+            static const AkUniqueID GROUP = 3303080338U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HEAVY = 2732489590U;
+                static const AkUniqueID LIGHT = 1935470627U;
+                static const AkUniqueID MEDIUM = 2849147824U;
+            } // namespace SWITCH
+        } // namespace CLOTHES_TYPE
+
+        namespace GEAR_TYPE
+        {
+            static const AkUniqueID GROUP = 4185872887U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HEAVY = 2732489590U;
+                static const AkUniqueID LIGHT = 1935470627U;
+                static const AkUniqueID MEDIUM = 2849147824U;
+                static const AkUniqueID NOTHING = 4248742144U;
+            } // namespace SWITCH
+        } // namespace GEAR_TYPE
+
         namespace PLAYERCYCLE
         {
             static const AkUniqueID GROUP = 1295475536U;
@@ -76,6 +102,13 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BOOK_PANNING = 3130544216U;
+        static const AkUniqueID RTPC_AMBVOLUME = 1226769967U;
+        static const AkUniqueID RTPC_MASTERVOLUME = 2582501215U;
+        static const AkUniqueID RTPC_MUSICVOLUME = 2378823330U;
+        static const AkUniqueID RTPC_SFXVOLUME = 2644490154U;
+        static const AkUniqueID RTPC_UIVOLUME = 3141145287U;
+        static const AkUniqueID RTPC_VOICESIDECHAIN = 1202556277U;
+        static const AkUniqueID RTPC_VOICEVOLUME = 3304106241U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -87,6 +120,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBBUS = 2894416467U;
+        static const AkUniqueID FOLEYBUS = 1216476988U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSICBUS = 2886307548U;
         static const AkUniqueID RVB = 695384145U;

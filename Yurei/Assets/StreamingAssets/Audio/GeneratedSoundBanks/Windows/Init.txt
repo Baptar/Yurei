@@ -1,5 +1,14 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1226769967	RTPC_AmbVolume			\Accessibility\VolumeControl\RTPC_AmbVolume	
+	2378823330	RTPC_MusicVolume			\Accessibility\VolumeControl\RTPC_MusicVolume	
+	2582501215	RTPC_MasterVolume			\Accessibility\VolumeControl\RTPC_MasterVolume	
+	2644490154	RTPC_SFXVolume			\Accessibility\VolumeControl\RTPC_SFXVolume	
+	3141145287	RTPC_UIVolume			\Accessibility\VolumeControl\RTPC_UIVolume	
+	3304106241	RTPC_VoiceVolume			\Accessibility\VolumeControl\RTPC_VoiceVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	695384145	RVB			\Default Work Unit\Master Audio Bus\RVB	
+	1216476988	FoleyBus			\Default Work Unit\Master Audio Bus\SfxBus\FoleyBus	
 	1372881427	UIBus			\Default Work Unit\Master Audio Bus\UIBus	
 	2045367873	VoiceBus			\Default Work Unit\Master Audio Bus\VoiceBus	
 	2401090920	UI_MenusBus			\Default Work Unit\Master Audio Bus\UIBus\UI_MenusBus	

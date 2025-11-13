@@ -28,12 +28,15 @@ public class FootstepController : MonoBehaviour
             }
       }
 
-      // Si le personnage est sur une surface avec FootstepProvider, le détecte et donne la valeur à TriggerFootstep()
+      
       void FixedUpdate()
       {
             if (Physics.Raycast(rayAnchor.position, Vector3.down, out RaycastHit hit,
                 maxGroundDist))
             {
+                  // TODO : Raycast that returns hit.triangleIndex -> find the submesh -> get the associated material -> make a database with material name <-> Wwise surface switch.
+
+                  // When the player is on a surface with FootstepSurfaceProvider, it updates the current surface.
                   if (hit.transform.TryGetComponent<FootstepSurfaceProvider>(out var provider))
                   {
                         currentProvider = provider;
@@ -47,7 +50,7 @@ public class FootstepController : MonoBehaviour
                 string mat = currentProvider.SurfaceMaterial?.Name ?? "Default";
                 string cond = currentProvider.SurfaceCondition?.Name ?? "Default";
 
-                Debug.Log($"[Footstep] Surface changed → Material: {mat}, Condition: {cond}", this);
+                Debug.Log($"Ground Surface changed → {mat}, {cond}", this);
             }
             }
       }
