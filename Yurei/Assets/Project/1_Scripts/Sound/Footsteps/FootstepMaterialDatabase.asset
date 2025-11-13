@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd209f22cc594c4ebdde0b91d1a33c5, type: 3}
+  m_Name: FootstepMaterialDatabase
+  m_EditorClassIdentifier: 
+  mappings:
+  - material: {fileID: 0}
+    surfaceMaterial:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 896b012214009cb4986944b7e4b4e42f, type: 2}
+    surfaceCondition:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: be931f07638e8734a8c7d984eecc5835, type: 2}
+    keywords:
+    - snow
+  - material: {fileID: 0}
+    surfaceMaterial:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 56d9a29af0ad9ea44a3997b8d77ebb05, type: 2}
+    surfaceCondition:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: be931f07638e8734a8c7d984eecc5835, type: 2}
+    keywords:
+    - sand_dry
+  - material: {fileID: 0}
+    surfaceMaterial:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 56d9a29af0ad9ea44a3997b8d77ebb05, type: 2}
+    surfaceCondition:
+      idInternal: 0
+      valueGuidInternal: 
+      groupIdInternal: 0
+      groupGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 3e0d507d19bc59d42bba02589f5f90f6, type: 2}
+    keywords:
+    - sand_wet
+  enableAutoDetection: 1
