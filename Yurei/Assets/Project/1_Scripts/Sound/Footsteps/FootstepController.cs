@@ -8,14 +8,16 @@ public class FootstepController : MonoBehaviour
       private float maxGroundDist = 20f;
 
       [Header("Audio Settings")]
-      [SerializeField] private AK.Wwise.Event footstepEvent;
+      [SerializeField] private AK.Wwise.Event playerWalkEvent;
+      //[SerializeField] private AK.Wwise.Event playerRunEvent;
       [SerializeField] private GameObject footstepSource; // Source audio (pied player)
 
       [Header("Fallback")] //Si rien renseigné : paramètres par défaut
-      [SerializeField] private AK.Wwise.Switch defaultMaterial;
-      [SerializeField] private AK.Wwise.Switch defaultCondition;
+      private AK.Wwise.Switch defaultMaterial;
+      private AK.Wwise.Switch defaultCondition;
 
-      private FootstepProvider currentProvider;
+      private FootstepSurfaceProvider currentProvider;
+      private FootstepSurfaceProvider lastProvider;
 
       private void Start()
       {
@@ -32,24 +34,33 @@ public class FootstepController : MonoBehaviour
             if (Physics.Raycast(rayAnchor.position, Vector3.down, out RaycastHit hit,
                 maxGroundDist))
             {
-                  if (hit.transform.TryGetComponent<FootstepProvider>(out var provider))
+                  if (hit.transform.TryGetComponent<FootstepSurfaceProvider>(out var provider))
                   {
                         currentProvider = provider;
                   }
+
+            // Debug : si on change de surface, afficher le nouveau matériau
+            if (currentProvider != lastProvider)
+            {
+                lastProvider = currentProvider;
+
+                string mat = currentProvider.SurfaceMaterial?.Name ?? "Default";
+                string cond = currentProvider.SurfaceCondition?.Name ?? "Default";
+
+                Debug.Log($"[Footstep] Surface changed → Material: {mat}, Condition: {cond}", this);
+            }
             }
       }
 
       // Fonction appelée à chaque pas
-      public void TriggerFootstep(AnimationEvent animationEvent)
+      public void TriggerFootstep()
       {
-            if (animationEvent.animatorClipInfo.weight > 0.5f) //J'ai pické ce if du character controller de Unity
-            {
                   if (currentProvider != null)
                   {
                         currentProvider.SurfaceMaterial?.SetValue(footstepSource);
                         currentProvider.SurfaceCondition?.SetValue(footstepSource);
 
-                        AudioServices.Events.PostEvent(footstepEvent, footstepSource);
+                        AudioServices.Events.PostEvent(playerWalkEvent, footstepSource);
                   }
                   else
                   {
@@ -57,8 +68,7 @@ public class FootstepController : MonoBehaviour
                         defaultMaterial?.SetValue(footstepSource);
                         defaultCondition?.SetValue(footstepSource);
 
-                        AudioServices.Events.PostEvent(footstepEvent, footstepSource);
+                        AudioServices.Events.PostEvent(playerWalkEvent, footstepSource);
                   }
-            }
       }
 }

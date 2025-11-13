@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676827c260a54de4e894fa9f54e3a052, type: 3}
+  m_Name: 28C627A5-B9B4-47EB-B0FC-02B5A34B012E
+  m_EditorClassIdentifier: 
+  objectName: Leaves
+  id: 582824249
+  guid: 28C627A5-B9B4-47EB-B0FC-02B5A34B012E
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 7dbf535d920ea63409b86ab3ea36063f, type: 2}

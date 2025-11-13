@@ -465,7 +465,7 @@
 						<RandomSequenceContainer Name="Template_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}" ShortID="392233748">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -829,12 +829,6 @@
 							</Grouping>
 							<Grouping>
 								<SwitchRef Name="Concrete" ID="{4EA102C5-097D-4ED5-A097-4C1E00239EB7}"/>
-								<ItemList>
-									<ItemRef Name="Template_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="Dirt" ID="{777E83D3-9557-41FA-8EBF-08CC7361A56D}"/>
 								<ItemList>
 									<ItemRef Name="Template_Walk" ID="{7ACA456F-E3EA-4886-961B-5B3DC7C5A29C}"/>
 								</ItemList>

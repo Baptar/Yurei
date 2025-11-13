@@ -2,7 +2,7 @@ using UnityEngine;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Collider))]
-public class FootstepProvider : MonoBehaviour
+public class FootstepSurfaceProvider : MonoBehaviour
 {
     [SerializeField]
     private AK.Wwise.Switch surfaceMaterial;

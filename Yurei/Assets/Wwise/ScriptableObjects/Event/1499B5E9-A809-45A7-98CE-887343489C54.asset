@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9326ce518988f249a3073ce5fc830c7, type: 3}
-  m_Name: E48D4166-4FBF-4144-86D2-1B4F66AFC9A3
+  m_Name: 1499B5E9-A809-45A7-98CE-887343489C54
   m_EditorClassIdentifier: 
-  objectName: Player_Walk
-  id: 2147561130
-  guid: E48D4166-4FBF-4144-86D2-1B4F66AFC9A3
+  objectName: Player_Run
+  id: 1136018332
+  guid: 1499B5E9-A809-45A7-98CE-887343489C54
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0

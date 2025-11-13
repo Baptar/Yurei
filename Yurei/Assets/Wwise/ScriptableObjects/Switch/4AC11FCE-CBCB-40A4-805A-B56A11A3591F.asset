@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676827c260a54de4e894fa9f54e3a052, type: 3}
+  m_Name: 4AC11FCE-CBCB-40A4-805A-B56A11A3591F
+  m_EditorClassIdentifier: 
+  objectName: Muddy
+  id: 3273609536
+  guid: 4AC11FCE-CBCB-40A4-805A-B56A11A3591F
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: fb439711fa2be5c408f5cfe6cf726929, type: 2}

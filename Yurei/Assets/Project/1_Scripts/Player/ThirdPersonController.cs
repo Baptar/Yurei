@@ -59,10 +59,6 @@ namespace StarterAssets
         [Space(10)]
         [Header("Audio")]
         [GUIColor(GUIColor.Orange)]
-        [SerializeField] private AudioClip landingAudioClip;
-        [SerializeField] private AudioClip[] footstepAudioClips;
-        [Range(0f, 1f)][SerializeField] private float footstepAudioVolume = 0.5f;
-        public AK.Wwise.Event footstepEvent;
         
         /// <summary>
         /// private variables
@@ -89,6 +85,7 @@ namespace StarterAssets
         private IInteractable _currentInteractable;
         private bool canMove = true;
 
+        public FootstepController FootstepController;
         private void Awake() => Instance = this;
 
         private void Start()
@@ -218,20 +215,18 @@ namespace StarterAssets
 
         private void OnFootstep(AnimationEvent animationEvent)
         {
-            if (animationEvent.animatorClipInfo.weight > 0.5f && footstepAudioClips.Length > 0)
+            if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
-                int index = UnityEngine.Random.Range(0, footstepAudioClips.Length);
-                footstepEvent.Post(gameObject);
-                //AudioSource.PlayClipAtPoint(footstepAudioClips[index], transform.position, footstepAudioVolume);
+                FootstepController.TriggerFootstep();
             }
         }
 
         private void OnLand(AnimationEvent animationEvent)
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f)
-            {
-                //AudioSource.PlayClipAtPoint(landingAudioClip, transform.position, footstepAudioVolume);
-            }
+                  {
+                    //TODO
+                  }
         }
 
         private bool CanInteract() => canInteract;
