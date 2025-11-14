@@ -3,103 +3,181 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class FootstepController : MonoBehaviour
 {
-      [Header("Raycast")]
-      [SerializeField] private Transform rayAnchor; //Endroit d'où est tiré le raycast - à placer entre les deux pieds
-      private float maxGroundDist = 20f;
+    [Header("Raycast")]
+    [SerializeField] private Transform rayAnchor; // Endroit d'où est tiré le raycast - à placer entre les deux pieds
+    [SerializeField] private float maxGroundDist = 1f;
+    [SerializeField] private LayerMask groundLayer = -1; // -1 = tous les layers
 
-      [Header("Audio Settings")]
-      [SerializeField] private AK.Wwise.Event playerWalkEvent;
-      //[SerializeField] private AK.Wwise.Event playerRunEvent;
-      [SerializeField] private GameObject footstepSource; // Source audio (pied player)
+    [Header("Audio Settings")]
+    [SerializeField] private AK.Wwise.Event playerWalkEvent;
+    [SerializeField] private GameObject footstepSource; // Source audio (pied player)
 
-      [Header("Material Detection")]
-      [SerializeField] private FootstepMaterialDatabase materialDatabase;
+    [Header("Material Detection")]
+    [SerializeField] private FootstepMaterialDatabase materialDatabase;
 
-      [Header("Debug")]
-      [SerializeField] private bool useSurfaceProvider = true;
-      [SerializeField] private bool useMaterialDetection = true;
+    [Header("Debug")]
+    [SerializeField] private bool useSurfaceProvider = true;
+    [SerializeField] private bool useMaterialDetection = true;
+    [SerializeField] private bool showDebugLogs = false;
 
-      [Header("Fallback")] //Si rien renseigné : paramètres par défaut
-      private AK.Wwise.Switch defaultMaterial;
-      private AK.Wwise.Switch defaultCondition;
+    [Header("Fallback")] // Si rien renseigné : paramètres par défaut
+    [SerializeField] private AK.Wwise.Switch defaultMaterial;
+    [SerializeField] private AK.Wwise.Switch defaultCondition;
 
-      private FootstepSurfaceProvider currentProvider;
-      private FootstepSurfaceProvider lastProvider;
-      private FootstepMaterialDatabase.MaterialMapping currentMaterialMapping;
+    [Header("Gizmos")]
+    [SerializeField] private float wireSphereRadius = 0.1f;
 
-      private void Start()
-      {
-            // Si pas défini, son des pas sera émis du gameObject sur lequel est ce script
-            if (footstepSource == null)
+    // Cache
+    private FootstepSurfaceProvider currentProvider;
+    private FootstepSurfaceProvider lastProvider;
+    private FootstepMaterialDatabase.MaterialMapping currentMaterialMapping;
+    private FootstepMaterialDatabase.MaterialMapping lastMaterialMapping;
+
+    private void Start()
+    {
+        // Si pas défini, son des pas sera émis du gameObject sur lequel est ce script
+        if (footstepSource == null)
+        {
+            footstepSource = gameObject;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // Reset les détections
+        currentProvider = null;
+        currentMaterialMapping = null;
+
+        if (Physics.Raycast(rayAnchor.position, Vector3.down, out RaycastHit hit,
+            maxGroundDist, groundLayer, QueryTriggerInteraction.Ignore))
+        {
+            // PRIORITÉ 1 : FootstepSurfaceProvider (override manuel)
+            if (useSurfaceProvider && hit.transform.TryGetComponent<FootstepSurfaceProvider>(out var provider))
             {
-                  footstepSource = gameObject;
-            }
-      }
+                currentProvider = provider;
 
-      void FixedUpdate()
-      {
-            if (Physics.Raycast(rayAnchor.position, Vector3.down, out RaycastHit hit,
-                maxGroundDist))
-            {
-                  // When the player is on a surface with FootstepSurfaceProvider, it updates the current surface.
-                  if (hit.transform.TryGetComponent<FootstepSurfaceProvider>(out var provider))
-                  {
-                        currentProvider = provider;
-                        // Debug : si on change de surface, afficher le nouveau matériau
-                        if (currentProvider != lastProvider)
-                        {
-                        lastProvider = currentProvider;
+                // Debug : si on change de surface
+                if (currentProvider != lastProvider)
+                {
+                    lastProvider = currentProvider;
+                    lastMaterialMapping = null; // Reset l'autre cache
 
+                    if (showDebugLogs)
+                    {
                         string mat = currentProvider.SurfaceMaterial?.Name ?? "Default";
                         string cond = currentProvider.SurfaceCondition?.Name ?? "Default";
-
-                        //Debug.Log($"Ground Surface changed → {mat}, {cond}", this);
-                        }
-                  }
-                  else if (useMaterialDetection && materialDatabase != null)
-                  {
-                        currentMaterialMapping = DetectMaterialAtHit(hit);
-
-                        if (currentMaterialMapping != null)
-                        {
-                              string mat = currentMaterialMapping.surfaceMaterial?.Name ?? "Unknown";
-                              string cond = currentMaterialMapping.surfaceCondition?.Name ?? "Unknown";
-                              //Debug.Log($"[Material] Surface → {mat}, {cond} (from {hit.collider.name})", this);
-                        }
-                  }
-                  
+                        Debug.Log($"[Provider] Surface → {mat}, {cond}", this);
+                    }
+                }
             }
-      }
+            // PRIORITÉ 2 : Détection automatique par Material
+            else if (useMaterialDetection && materialDatabase != null)
+            {
+                currentMaterialMapping = DetectMaterialAtHit(hit);
 
-      // Fonction appelée à chaque pas
-      public void TriggerFootstep()
-      {
-                  if (useSurfaceProvider && currentProvider != null)
-                  {
-                        currentProvider.SurfaceMaterial?.SetValue(footstepSource);
-                        currentProvider.SurfaceCondition?.SetValue(footstepSource);
-                        Debug.Log("Footstep - Used FootstepProvider("+ currentProvider.SurfaceMaterial?.Name+")");
-                  }
-                  else if (useMaterialDetection && currentMaterialMapping != null)
-                  {
-                        currentMaterialMapping.surfaceMaterial?.SetValue(footstepSource);
-                        currentMaterialMapping.surfaceCondition?.SetValue(footstepSource);
-                        Debug.Log("Footstep - Used MaterialMapping("+ currentMaterialMapping.surfaceMaterial?.Name+")");
-                  }
-                  else
-                  {
-                        // Si pas de FootstepProvider ni de material trouvé, utilise les valeurs par défaut
-                        defaultMaterial?.SetValue(footstepSource);
-                        defaultCondition?.SetValue(footstepSource);
-                        Debug.Log("Footstep - Used Default Material (Fallback)");
-                  }
-                  AudioServices.Events.PostEvent(playerWalkEvent, footstepSource);
-      }
-      private FootstepMaterialDatabase.MaterialMapping DetectMaterialAtHit(RaycastHit hit)
+                // Si on passe de Provider à Material, reset le cache Provider
+                if (lastProvider != null)
+                {
+                    lastProvider = null;
+                    if (showDebugLogs)
+                    {
+                        Debug.Log($"[Switch] Provider → Material detection", this);
+                    }
+                }
+
+                // Debug : si on change de material
+                if (currentMaterialMapping != lastMaterialMapping)
+                {
+                    lastMaterialMapping = currentMaterialMapping;
+
+                    if (showDebugLogs && currentMaterialMapping != null)
+                    {
+                        string mat = currentMaterialMapping.surfaceMaterial?.Name ?? "Unknown";
+                        string cond = currentMaterialMapping.surfaceCondition?.Name ?? "Unknown";
+                        Debug.Log($"[Material] Surface → {mat}, {cond} (from {hit.collider.name})", this);
+                    }
+                }
+            }
+            // Aucune détection : reset tout
+            else
+            {
+                if (lastProvider != null || lastMaterialMapping != null)
+                {
+                    lastProvider = null;
+                    lastMaterialMapping = null;
+                    if (showDebugLogs)
+                    {
+                        Debug.Log($"[Switch] No surface detected, using fallback", this);
+                    }
+                }
+            }
+        }
+        // Raycast ne touche rien : reset tout
+        else
+        {
+            if (lastProvider != null || lastMaterialMapping != null)
+            {
+                lastProvider = null;
+                lastMaterialMapping = null;
+                // if (showDebugLogs)
+                // {
+                //     Debug.Log($"[Switch] Lost ground contact", this);
+                // }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Fonction appelée à chaque pas (Animation Event)
+    /// </summary>
+    public void TriggerFootstep()
+    {
+        // PRIORITÉ 1 : FootstepSurfaceProvider
+        if (useSurfaceProvider && currentProvider != null)
+        {
+            currentProvider.SurfaceMaterial?.SetValue(footstepSource);
+            currentProvider.SurfaceCondition?.SetValue(footstepSource);
+            
+            if (showDebugLogs)
+            {
+                Debug.Log($"Footstep - Used FootstepProvider ({currentProvider.SurfaceMaterial?.Name})");
+            }
+        }
+        // PRIORITÉ 2 : Material Detection
+        else if (useMaterialDetection && currentMaterialMapping != null)
+        {
+            currentMaterialMapping.surfaceMaterial?.SetValue(footstepSource);
+            currentMaterialMapping.surfaceCondition?.SetValue(footstepSource);
+            
+            if (showDebugLogs)
+            {
+                Debug.Log($"Footstep - Used MaterialMapping ({currentMaterialMapping.surfaceMaterial?.Name})");
+            }
+        }
+        // PRIORITÉ 3 : Fallback
+        else
+        {
+            defaultMaterial?.SetValue(footstepSource);
+            defaultCondition?.SetValue(footstepSource);
+            
+            if (showDebugLogs)
+            {
+                Debug.Log("Footstep - Used Default Material (Fallback)");
+            }
+        }
+
+        // Play le son
+        AudioServices.Events.PostEvent(playerWalkEvent, footstepSource);
+    }
+
+    /// <summary>
+    /// Détecte le material Unity au point de contact
+    /// </summary>
+    private FootstepMaterialDatabase.MaterialMapping DetectMaterialAtHit(RaycastHit hit)
     {
         Material hitMaterial = null;
 
-        // CAS 1 : MeshCollider - Détection précise par submesh (pour meshes multi-matériaux)
+        // Si MeshCollider - Détection précise par submesh (pour meshes multi-matériaux)
         if (hit.collider is MeshCollider meshCollider && meshCollider.sharedMesh != null)
         {
             Renderer renderer = hit.collider.GetComponent<Renderer>();
@@ -126,7 +204,7 @@ public class FootstepController : MonoBehaviour
                 }
             }
         }
-        // CAS 2 : BoxCollider, SphereCollider, CapsuleCollider, etc.
+        // Si BoxCollider, SphereCollider, CapsuleCollider, etc.
         else
         {
             // Cherche d'abord sur le GameObject du collider
@@ -159,6 +237,10 @@ public class FootstepController : MonoBehaviour
 
         return null;
     }
+
+    /// <summary>
+    /// Trouve l'index du submesh qui contient un triangle donné
+    /// </summary>
     private int GetSubmeshIndex(Mesh mesh, int triangleIndex)
     {
         if (mesh == null) return 0;
@@ -181,12 +263,13 @@ public class FootstepController : MonoBehaviour
         return 0; // Fallback
     }
 
-#if UNITY_EDITOR //DEBUG à checker
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         if (rayAnchor == null) return;
 
         // Couleur selon détection
+        // Jaune = fallback, Vert = FootstepSurfaceProvider, Cyan = MaterialMapping
         Color rayColor = Color.yellow;
         if (currentProvider != null) rayColor = Color.green;
         else if (currentMaterialMapping != null) rayColor = Color.cyan;
@@ -195,12 +278,12 @@ public class FootstepController : MonoBehaviour
         Gizmos.DrawRay(rayAnchor.position, Vector3.down * maxGroundDist);
 
         if (Physics.Raycast(rayAnchor.position, Vector3.down, out RaycastHit hit,
-            maxGroundDist))
+            maxGroundDist, groundLayer, QueryTriggerInteraction.Ignore))
         {
-            Gizmos.DrawWireSphere(hit.point, 0.1f);
+            Gizmos.DrawWireSphere(hit.point, wireSphereRadius);
 
             // Label
-            string label = "No detection";
+            string label = "No detection (Fallback)";
             if (currentProvider != null)
             {
                 label = $"[Provider]\n{currentProvider.SurfaceMaterial?.Name ?? "?"}";
@@ -213,6 +296,7 @@ public class FootstepController : MonoBehaviour
             UnityEditor.Handles.Label(hit.point + Vector3.up * 0.3f, label);
         }
     }
+
     private void OnValidate()
     {
         // Auto-setup du rayAnchor si pas défini
@@ -222,5 +306,4 @@ public class FootstepController : MonoBehaviour
         }
     }
 #endif
-
 }
